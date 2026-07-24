@@ -8,33 +8,6 @@ redirect_from:
   - /QuantumICT/
 ---
 
-/* Increase section labels and research numbers */
-
-.lab-label {
-  margin-bottom: 0.8rem;
-  font-size: 0.92rem;
-  font-weight: 800;
-  letter-spacing: 0.13em;
-  line-height: 1.4;
-}
-
-.lab-research-item__number {
-  margin-bottom: 0.9rem;
-  font-size: 0.92rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  line-height: 1.4;
-}
-
-/* Slightly reduce them on small screens */
-@media (max-width: 520px) {
-  .lab-label,
-  .lab-research-item__number {
-    font-size: 0.84rem;
-  }
-}
-
-
 <style>
 /* =========================================================
    Academic homepage layout reset
@@ -68,7 +41,9 @@ redirect_from:
   display: none !important;
 }
 
-/* Header width and typography */
+/* =========================================================
+   Header
+   ========================================================= */
 
 .masthead__inner-wrap {
   width: min(1260px, calc(100% - 48px)) !important;
@@ -111,7 +86,7 @@ redirect_from:
 }
 
 /* =========================================================
-   Global variables
+   Global variables and shared styles
    ========================================================= */
 
 .lab-home {
@@ -126,6 +101,7 @@ redirect_from:
   --white: #ffffff;
 
   width: 100%;
+  margin-bottom: 0;
   color: var(--text);
   font-family:
     -apple-system,
@@ -155,12 +131,17 @@ redirect_from:
   letter-spacing: -0.035em;
 }
 
+/*
+  Enlarged to twice the original 0.76rem size:
+  About Us, Research, Our Team, Publications and Join Us
+*/
 .lab-label {
-  margin: 0 0 0.65rem;
+  margin: 0 0 0.9rem;
   color: var(--blue);
-  font-size: 0.76rem;
-  font-weight: 750;
-  letter-spacing: 0.15em;
+  font-size: 1.52rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  line-height: 1.3;
   text-transform: uppercase;
 }
 
@@ -526,12 +507,18 @@ redirect_from:
   border-left: 1px solid var(--line);
 }
 
+/*
+  Enlarged to twice the original 0.76rem size:
+  01, 02 and 03
+*/
 .lab-research-item__number {
   display: block;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.9rem;
   color: var(--blue);
-  font-size: 0.76rem;
+  font-size: 1.52rem;
   font-weight: 800;
+  letter-spacing: 0.06em;
+  line-height: 1.3;
 }
 
 .lab-research-item h3 {
@@ -603,6 +590,7 @@ redirect_from:
    ========================================================= */
 
 .lab-join {
+  margin-bottom: 0;
   border-bottom: 4px solid #0967df;
   background: #ffffff;
 }
@@ -662,7 +650,7 @@ redirect_from:
 }
 
 /* =========================================================
-   Responsive
+   Responsive layout
    ========================================================= */
 
 @media (max-width: 1050px) {
@@ -807,6 +795,15 @@ redirect_from:
 
   .lab-about h2 {
     font-size: 2.15rem;
+  }
+
+  /*
+    Keep section labels enlarged on mobile.
+    Slightly reduced only to avoid overflow.
+  */
+  .lab-label,
+  .lab-research-item__number {
+    font-size: 1.25rem;
   }
 }
 </style>
