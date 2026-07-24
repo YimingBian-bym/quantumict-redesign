@@ -35,13 +35,18 @@ redirect_from:
   padding: 0 !important;
 }
 
+/*
+  Hide the default page title and metadata.
+  Do not hide .page__footer, because we want to retain the footer.
+*/
 .page__title,
-.page__meta,
-.page__footer {
+.page__meta {
   display: none !important;
 }
 
-/* Header width and typography */
+/* =========================================================
+   Header
+   ========================================================= */
 
 .masthead__inner-wrap {
   width: min(1260px, calc(100% - 48px)) !important;
@@ -84,7 +89,7 @@ redirect_from:
 }
 
 /* =========================================================
-   Global variables
+   Global variables and shared styles
    ========================================================= */
 
 .lab-home {
@@ -128,12 +133,17 @@ redirect_from:
   letter-spacing: -0.035em;
 }
 
+/*
+  Enlarged section labels:
+  About Us, Research, Our Team, Publications and Join Us
+*/
 .lab-label {
-  margin: 0 0 0.65rem;
+  margin: 0 0 0.8rem;
   color: var(--blue);
-  font-size: 0.76rem;
-  font-weight: 750;
-  letter-spacing: 0.15em;
+  font-size: 0.92rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  line-height: 1.4;
   text-transform: uppercase;
 }
 
@@ -499,12 +509,16 @@ redirect_from:
   border-left: 1px solid var(--line);
 }
 
+/* Enlarged 01 / 02 / 03 */
+
 .lab-research-item__number {
   display: block;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.9rem;
   color: var(--blue);
-  font-size: 0.76rem;
+  font-size: 0.92rem;
   font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
 }
 
 .lab-research-item h3 {
@@ -635,7 +649,62 @@ redirect_from:
 }
 
 /* =========================================================
-   Responsive
+   Restored footer
+   ========================================================= */
+
+.page__footer {
+  display: block !important;
+  clear: both !important;
+  width: 100% !important;
+  margin-top: 0 !important;
+  border-top: 1px solid #e1e6ed;
+  background: #f2f4f7 !important;
+}
+
+.page__footer footer {
+  width: min(1240px, calc(100% - 48px));
+  max-width: none !important;
+  margin: 0 auto !important;
+  padding: 2.4rem 0 !important;
+}
+
+.page__footer-follow {
+  margin: 0 0 1rem !important;
+}
+
+.page__footer-follow li {
+  color: #758397;
+}
+
+.page__footer-follow a,
+.page__footer-copyright,
+.page__footer-copyright a {
+  color: #7a8798 !important;
+}
+
+.page__footer-follow a:hover,
+.page__footer-copyright a:hover {
+  color: #0a5fd4 !important;
+}
+
+.page__footer-copyright {
+  margin-top: 1rem !important;
+  font-size: 0.86rem;
+  line-height: 1.7;
+}
+
+/* Prevent an unnecessary gap before the footer */
+
+.lab-home {
+  margin-bottom: 0 !important;
+}
+
+.lab-join {
+  margin-bottom: 0 !important;
+}
+
+/* =========================================================
+   Responsive layout
    ========================================================= */
 
 @media (max-width: 1050px) {
@@ -738,6 +807,10 @@ redirect_from:
   .lab-join .lab-actions {
     grid-column: auto;
   }
+
+  .page__footer footer {
+    width: calc(100% - 32px);
+  }
 }
 
 @media (max-width: 520px) {
@@ -780,6 +853,17 @@ redirect_from:
 
   .lab-about h2 {
     font-size: 2.15rem;
+  }
+
+  .lab-label,
+  .lab-research-item__number {
+    font-size: 0.84rem;
+  }
+
+  .page__footer footer {
+    width: calc(100% - 24px);
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
   }
 }
 </style>
@@ -1062,7 +1146,15 @@ redirect_from:
         >
           <span>Contact Us</span>
           <span aria-hidden="true">→</span>
-        </a>
+        </ <div class="lab-actions">
+
+        <a
+          class="lab-button lab-button--navy"
+          href="{{ '/join-us/' | relative_url }}"
+        >
+          <span>Opportunities</span>
+          <span aria-hidden="true">→</span>
+a>
 
       </div>
 
