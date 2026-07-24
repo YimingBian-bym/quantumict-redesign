@@ -8,7 +8,7 @@ redirect_from:
   - /QuantumICT/
 ---
 
-We are a team to accelerate science discovery at HPC.  
+I'm bianyiming. We are a team to accelerate science discovery at HPC.  
 
 We are focuing on:
 
