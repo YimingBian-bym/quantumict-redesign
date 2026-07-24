@@ -41,8 +41,8 @@ redirect_from:
 }
 
 /*
-  不单独修改 masthead、greedy-nav、site-title，
-  让首页导航栏和其他页面使用相同的主题样式。
+  不覆盖 masthead、greedy-nav 和 site-title，
+  让首页导航栏与其他页面保持一致。
 */
 
 /* =========================================================
@@ -95,18 +95,17 @@ redirect_from:
   About Us / Research / Our Team /
   Publications / Join Us
 
-  基础样式。
-  页面最后还有高优先级规则，防止主题样式覆盖。
+  字号为 3.04rem，约为 01 / 02 / 03 的两倍。
 */
 
 .lab-label {
   max-width: 100%;
-  margin: 0 0 1.4rem;
+  margin: 0 0 1.15rem;
   color: var(--blue);
-  font-size: 6.08rem;
+  font-size: 3.04rem;
   font-weight: 800;
-  letter-spacing: 0.015em;
-  line-height: 0.95;
+  letter-spacing: 0.035em;
+  line-height: 1;
   overflow-wrap: anywhere;
   text-transform: uppercase;
 }
@@ -409,7 +408,7 @@ redirect_from:
    ========================================================= */
 
 .lab-about {
-  padding: 4.8rem 0 4rem;
+  padding: 4.2rem 0 3.8rem;
   border-bottom: 1px solid var(--line);
 }
 
@@ -446,11 +445,11 @@ redirect_from:
    ========================================================= */
 
 .lab-research {
-  padding: 4rem 0 4.5rem;
+  padding: 3.5rem 0 4.2rem;
 }
 
 .lab-section-title {
-  margin-bottom: 1.3rem;
+  margin-bottom: 1.2rem;
 }
 
 .lab-section-title h2 {
@@ -475,6 +474,8 @@ redirect_from:
   padding-left: 3.5rem;
   border-left: 1px solid var(--line);
 }
+
+/* 01 / 02 / 03 */
 
 .lab-research-item__number {
   display: block;
@@ -506,7 +507,7 @@ redirect_from:
 }
 
 /* =========================================================
-   Team and publications band
+   Team and publications
    ========================================================= */
 
 .lab-information {
@@ -525,8 +526,8 @@ redirect_from:
 }
 
 .lab-information__item {
-  min-height: 280px;
-  padding: 3.5rem 4rem 3.5rem 0;
+  min-height: 250px;
+  padding: 3.2rem 4rem 3.2rem 0;
 }
 
 .lab-information__item + .lab-information__item {
@@ -568,8 +569,8 @@ redirect_from:
     auto;
   gap: 4rem;
   align-items: center;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
 }
 
 .lab-join h2 {
@@ -674,20 +675,6 @@ body {
    Responsive layout
    ========================================================= */
 
-@media (max-width: 1200px) {
-  .lab-about__grid {
-    gap: 4rem;
-  }
-
-  .lab-information__item {
-    padding-right: 2.5rem;
-  }
-
-  .lab-information__item + .lab-information__item {
-    padding-left: 2.5rem;
-  }
-}
-
 @media (max-width: 1050px) {
   .lab-hero__inner {
     grid-template-columns:
@@ -700,12 +687,24 @@ body {
     font-size: clamp(3.4rem, 6.4vw, 5rem);
   }
 
+  .lab-about__grid {
+    gap: 3.5rem;
+  }
+
   .lab-research-item {
     padding-right: 2rem;
   }
 
   .lab-research-item + .lab-research-item {
     padding-left: 2rem;
+  }
+
+  .lab-information__item {
+    padding-right: 2.5rem;
+  }
+
+  .lab-information__item + .lab-information__item {
+    padding-left: 2.5rem;
   }
 
   .lab-join__grid {
@@ -759,7 +758,7 @@ body {
   .lab-information__item,
   .lab-information__item + .lab-information__item {
     min-height: auto;
-    padding: 3rem 0;
+    padding: 2.8rem 0;
     border-left: 0;
   }
 
@@ -834,53 +833,37 @@ body {
    ========================================================= */
 
 /*
-  Academic Pages 会给正文中的 p 标签应用主题字号。
-  这里使用更具体的选择器和 !important，
-  确保蓝色标签真正按照指定字号显示。
+  Academic Pages 会为正文中的 p 标签设置默认字号。
+  使用高优先级选择器和 !important，确保标签字号生效。
 */
 
 .page__content p.lab-label {
   max-width: 100% !important;
-  margin: 0 0 1.4rem !important;
+  margin: 0 0 1.15rem !important;
   color: var(--blue) !important;
-  font-size: 6.08rem !important;
+  font-size: 3.04rem !important;
   font-weight: 800 !important;
-  letter-spacing: 0.015em !important;
-  line-height: 0.95 !important;
+  letter-spacing: 0.035em !important;
+  line-height: 1 !important;
   overflow-wrap: anywhere !important;
   text-transform: uppercase !important;
 }
 
-/* 01 / 02 / 03 保持当前大小 */
+/* 01 / 02 / 03 保持为 1.52rem */
 
 .page__content .lab-research-item__number {
   font-size: 1.52rem !important;
 }
 
-/* Medium desktop */
-
-@media (max-width: 1200px) {
-  .page__content p.lab-label {
-    font-size: 5rem !important;
-  }
-}
-
-/* Small desktop and tablet */
-
-@media (max-width: 1050px) {
-  .page__content p.lab-label {
-    font-size: 4.2rem !important;
-  }
-}
+/* Tablet */
 
 @media (max-width: 800px) {
   .page__content p.lab-label {
-    font-size: 3.25rem !important;
-    line-height: 1 !important;
+    font-size: 2.5rem !important;
   }
 }
 
-/* Mobile */
+/* Mobile：仍保持为数字的约两倍 */
 
 @media (max-width: 520px) {
   .page__content p.lab-label {
