@@ -12,9 +12,9 @@ title                    : "QuantumICT"
 title_separator          : "-"
 name                     : &name "QuantumICT group"
 description              : &description "Our research group, QuantumICT at HFNL & USTC."
-url                      : https://quantumict.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "QuantumICT/quantumict.github.io"
+url                      : "https://YimingBian-bym.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl                  : "/quantumict-redesign" # the subpath of your site, e.g. "/blog"
+repository               : "YimingBian-bym/quantumict-redesign"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
@@ -346,7 +346,7 @@ sass:
 permalink: /:categories/:title/
 # paginate: 5 # amount of posts to show
 # paginate_path: /page:num/
-timezone: America/Los_Angeles # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Asia/Shanghai # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins
