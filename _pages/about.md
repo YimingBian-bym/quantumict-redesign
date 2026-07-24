@@ -841,7 +841,7 @@ body {
   max-width: 100% !important;
   margin: 0 0 1.15rem !important;
   color: var(--blue) !important;
-  font-size: 3.04rem !important;
+  font-size: 1.34rem !important;
   font-weight: 800 !important;
   letter-spacing: 0.035em !important;
   line-height: 1 !important;
