@@ -8,6 +8,33 @@ redirect_from:
   - /QuantumICT/
 ---
 
+/* Increase section labels and research numbers */
+
+.lab-label {
+  margin-bottom: 0.8rem;
+  font-size: 0.92rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  line-height: 1.4;
+}
+
+.lab-research-item__number {
+  margin-bottom: 0.9rem;
+  font-size: 0.92rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+}
+
+/* Slightly reduce them on small screens */
+@media (max-width: 520px) {
+  .lab-label,
+  .lab-research-item__number {
+    font-size: 0.84rem;
+  }
+}
+
+
 <style>
 /* =========================================================
    Academic homepage layout reset
