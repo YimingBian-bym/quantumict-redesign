@@ -10,7 +10,7 @@ redirect_from:
 
 <style>
 /* =========================================================
-   Academic homepage layout reset
+   Homepage layout reset
    ========================================================= */
 
 #main {
@@ -35,59 +35,18 @@ redirect_from:
   padding: 0 !important;
 }
 
-/* Hide only the default title and metadata. Keep the footer visible. */
-
 .page__title,
 .page__meta {
   display: none !important;
 }
 
-/* =========================================================
-   Header
-   ========================================================= */
-
-.masthead__inner-wrap {
-  width: min(1260px, calc(100% - 48px)) !important;
-  max-width: none !important;
-  margin: 0 auto !important;
-  padding: 0 !important;
-}
-
-.greedy-nav {
-  min-height: 68px;
-  align-items: center;
-  background: #ffffff;
-}
-
-.greedy-nav .site-title {
-  color: #0a2853 !important;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.42rem;
-  font-weight: 500;
-  letter-spacing: -0.02em;
-}
-
-.greedy-nav a {
-  color: #142b4b;
-}
-
-.greedy-nav .visible-links a {
-  padding-right: 1.1rem;
-  padding-left: 1.1rem;
-  font-size: 0.92rem;
-  font-weight: 500;
-}
-
-.greedy-nav .visible-links a::before {
-  display: none;
-}
-
-.masthead {
-  border-bottom: 1px solid #e7ebf1;
-}
+/*
+  此处不再修改 masthead、greedy-nav、site-title。
+  因此首页导航栏会与其他页面使用同一套主题样式。
+*/
 
 /* =========================================================
-   Global styles
+   Global homepage styles
    ========================================================= */
 
 .lab-home {
@@ -135,15 +94,19 @@ redirect_from:
 /*
   About Us / Research / Our Team /
   Publications / Join Us
+
+  原来是 3.04rem，现在再放大两倍至 6.08rem。
 */
 
 .lab-label {
-  margin: 0 0 1.15rem;
+  max-width: 100%;
+  margin: 0 0 1.4rem;
   color: var(--blue);
-  font-size: 3.04rem;
+  font-size: 6.08rem;
   font-weight: 800;
-  letter-spacing: 0.06em;
-  line-height: 1.15;
+  letter-spacing: 0.015em;
+  line-height: 0.95;
+  overflow-wrap: anywhere;
   text-transform: uppercase;
 }
 
@@ -442,7 +405,7 @@ redirect_from:
    ========================================================= */
 
 .lab-about {
-  padding: 3.6rem 0 3rem;
+  padding: 4.8rem 0 4rem;
   border-bottom: 1px solid var(--line);
 }
 
@@ -479,11 +442,11 @@ redirect_from:
    ========================================================= */
 
 .lab-research {
-  padding: 2.2rem 0 3.8rem;
+  padding: 4rem 0 4.5rem;
 }
 
 .lab-section-title {
-  margin-bottom: 0.25rem;
+  margin-bottom: 1.3rem;
 }
 
 .lab-section-title h2 {
@@ -501,7 +464,7 @@ redirect_from:
 
 .lab-research-item {
   min-height: 210px;
-  padding: 0.75rem 3.5rem 0 0;
+  padding: 1.1rem 3.5rem 0 0;
 }
 
 .lab-research-item + .lab-research-item {
@@ -509,7 +472,7 @@ redirect_from:
   border-left: 1px solid var(--line);
 }
 
-/* 01 / 02 / 03 remain unchanged */
+/* 01 / 02 / 03 保持不变 */
 
 .lab-research-item__number {
   display: block;
@@ -560,8 +523,8 @@ redirect_from:
 }
 
 .lab-information__item {
-  min-height: 185px;
-  padding: 2.2rem 4rem 2.2rem 0;
+  min-height: 280px;
+  padding: 3.5rem 4rem 3.5rem 0;
 }
 
 .lab-information__item + .lab-information__item {
@@ -603,8 +566,8 @@ redirect_from:
     auto;
   gap: 4rem;
   align-items: center;
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .lab-join h2 {
@@ -701,13 +664,6 @@ redirect_from:
   line-height: 1.7;
 }
 
-/* Remove possible spacing inserted by the old theme */
-
-.page__inner-wrap::after,
-.page__content::after {
-  margin: 0 !important;
-}
-
 body {
   padding-bottom: 0 !important;
 }
@@ -716,7 +672,29 @@ body {
    Responsive layout
    ========================================================= */
 
+@media (max-width: 1200px) {
+  .lab-label {
+    font-size: 5rem;
+  }
+
+  .lab-about__grid {
+    gap: 4rem;
+  }
+
+  .lab-information__item {
+    padding-right: 2.5rem;
+  }
+
+  .lab-information__item + .lab-information__item {
+    padding-left: 2.5rem;
+  }
+}
+
 @media (max-width: 1050px) {
+  .lab-label {
+    font-size: 4.2rem;
+  }
+
   .lab-hero__inner {
     grid-template-columns:
       minmax(0, 1.1fr)
@@ -728,24 +706,12 @@ body {
     font-size: clamp(3.4rem, 6.4vw, 5rem);
   }
 
-  .lab-about__grid {
-    gap: 3.5rem;
-  }
-
   .lab-research-item {
     padding-right: 2rem;
   }
 
   .lab-research-item + .lab-research-item {
     padding-left: 2rem;
-  }
-
-  .lab-information__item {
-    padding-right: 2.5rem;
-  }
-
-  .lab-information__item + .lab-information__item {
-    padding-left: 2.5rem;
   }
 
   .lab-join__grid {
@@ -760,9 +726,12 @@ body {
 }
 
 @media (max-width: 800px) {
-  .lab-container,
-  .masthead__inner-wrap {
-    width: min(1240px, calc(100% - 32px)) !important;
+  .lab-container {
+    width: min(1240px, calc(100% - 32px));
+  }
+
+  .lab-label {
+    font-size: 3.25rem;
   }
 
   .lab-hero__inner {
@@ -800,7 +769,7 @@ body {
   .lab-information__item,
   .lab-information__item + .lab-information__item {
     min-height: auto;
-    padding: 2rem 0;
+    padding: 3rem 0;
     border-left: 0;
   }
 
@@ -823,9 +792,13 @@ body {
 }
 
 @media (max-width: 520px) {
-  .lab-container,
-  .masthead__inner-wrap {
-    width: calc(100% - 24px) !important;
+  .lab-container {
+    width: calc(100% - 24px);
+  }
+
+  .lab-label {
+    font-size: 2.5rem;
+    line-height: 1;
   }
 
   .lab-hero h1 {
@@ -857,15 +830,11 @@ body {
   }
 
   .lab-about {
-    padding-top: 2.6rem;
+    padding-top: 3rem;
   }
 
   .lab-about h2 {
     font-size: 2.15rem;
-  }
-
-  .lab-label {
-    font-size: 2rem;
   }
 
   .lab-research-item__number {
