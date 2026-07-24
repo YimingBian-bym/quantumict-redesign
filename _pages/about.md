@@ -41,8 +41,8 @@ redirect_from:
 }
 
 /*
-  此处不再修改 masthead、greedy-nav、site-title。
-  因此首页导航栏会与其他页面使用同一套主题样式。
+  不单独修改 masthead、greedy-nav、site-title，
+  让首页导航栏和其他页面使用相同的主题样式。
 */
 
 /* =========================================================
@@ -95,7 +95,8 @@ redirect_from:
   About Us / Research / Our Team /
   Publications / Join Us
 
-  原来是 3.04rem，现在再放大两倍至 6.08rem。
+  基础样式。
+  页面最后还有高优先级规则，防止主题样式覆盖。
 */
 
 .lab-label {
@@ -397,7 +398,10 @@ redirect_from:
   background-size:
     48px 48px,
     61px 61px;
-  mask-image: radial-gradient(circle, #000 0%, transparent 72%);
+  -webkit-mask-image:
+    radial-gradient(circle, #000 0%, transparent 72%);
+  mask-image:
+    radial-gradient(circle, #000 0%, transparent 72%);
 }
 
 /* =========================================================
@@ -471,8 +475,6 @@ redirect_from:
   padding-left: 3.5rem;
   border-left: 1px solid var(--line);
 }
-
-/* 01 / 02 / 03 保持不变 */
 
 .lab-research-item__number {
   display: block;
@@ -673,10 +675,6 @@ body {
    ========================================================= */
 
 @media (max-width: 1200px) {
-  .lab-label {
-    font-size: 5rem;
-  }
-
   .lab-about__grid {
     gap: 4rem;
   }
@@ -691,10 +689,6 @@ body {
 }
 
 @media (max-width: 1050px) {
-  .lab-label {
-    font-size: 4.2rem;
-  }
-
   .lab-hero__inner {
     grid-template-columns:
       minmax(0, 1.1fr)
@@ -728,10 +722,6 @@ body {
 @media (max-width: 800px) {
   .lab-container {
     width: min(1240px, calc(100% - 32px));
-  }
-
-  .lab-label {
-    font-size: 3.25rem;
   }
 
   .lab-hero__inner {
@@ -796,11 +786,6 @@ body {
     width: calc(100% - 24px);
   }
 
-  .lab-label {
-    font-size: 2.5rem;
-    line-height: 1;
-  }
-
   .lab-hero h1 {
     font-size: 3.1rem;
   }
@@ -837,14 +822,74 @@ body {
     font-size: 2.15rem;
   }
 
-  .lab-research-item__number {
-    font-size: 1.25rem;
-  }
-
   .page__footer footer {
     width: calc(100% - 24px) !important;
     padding-top: 2rem !important;
     padding-bottom: 2rem !important;
+  }
+}
+
+/* =========================================================
+   High-priority label overrides
+   ========================================================= */
+
+/*
+  Academic Pages 会给正文中的 p 标签应用主题字号。
+  这里使用更具体的选择器和 !important，
+  确保蓝色标签真正按照指定字号显示。
+*/
+
+.page__content p.lab-label {
+  max-width: 100% !important;
+  margin: 0 0 1.4rem !important;
+  color: var(--blue) !important;
+  font-size: 6.08rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.015em !important;
+  line-height: 0.95 !important;
+  overflow-wrap: anywhere !important;
+  text-transform: uppercase !important;
+}
+
+/* 01 / 02 / 03 保持当前大小 */
+
+.page__content .lab-research-item__number {
+  font-size: 1.52rem !important;
+}
+
+/* Medium desktop */
+
+@media (max-width: 1200px) {
+  .page__content p.lab-label {
+    font-size: 5rem !important;
+  }
+}
+
+/* Small desktop and tablet */
+
+@media (max-width: 1050px) {
+  .page__content p.lab-label {
+    font-size: 4.2rem !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .page__content p.lab-label {
+    font-size: 3.25rem !important;
+    line-height: 1 !important;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 520px) {
+  .page__content p.lab-label {
+    font-size: 2.5rem !important;
+    line-height: 1 !important;
+  }
+
+  .page__content .lab-research-item__number {
+    font-size: 1.25rem !important;
   }
 }
 </style>
