@@ -42,7 +42,7 @@ redirect_from:
 
 /*
   不覆盖 masthead、greedy-nav 和 site-title，
-  让首页导航栏与其他页面保持一致。
+  让首页导航栏与其他页面使用相同的主题样式。
 */
 
 /* =========================================================
@@ -94,19 +94,16 @@ redirect_from:
 /*
   About Us / Research / Our Team /
   Publications / Join Us
-
-  字号为 3.04rem，约为 01 / 02 / 03 的两倍。
 */
 
 .lab-label {
   max-width: 100%;
-  margin: 0 0 1.15rem;
+  margin: 0 0 0.9rem;
   color: var(--blue);
-  font-size: 3.04rem;
+  font-size: 1.34rem;
   font-weight: 800;
-  letter-spacing: 0.035em;
-  line-height: 1;
-  overflow-wrap: anywhere;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
   text-transform: uppercase;
 }
 
@@ -475,8 +472,6 @@ redirect_from:
   border-left: 1px solid var(--line);
 }
 
-/* 01 / 02 / 03 */
-
 .lab-research-item__number {
   display: block;
   margin-bottom: 0.9rem;
@@ -833,42 +828,39 @@ body {
    ========================================================= */
 
 /*
-  Academic Pages 会为正文中的 p 标签设置默认字号。
-  使用高优先级选择器和 !important，确保标签字号生效。
+  防止 Academic Pages 的正文段落样式覆盖标签字号。
 */
 
 .page__content p.lab-label {
   max-width: 100% !important;
-  margin: 0 0 1.15rem !important;
+  margin: 0 0 0.9rem !important;
   color: var(--blue) !important;
   font-size: 1.34rem !important;
   font-weight: 800 !important;
-  letter-spacing: 0.035em !important;
-  line-height: 1 !important;
-  overflow-wrap: anywhere !important;
+  letter-spacing: 0.1em !important;
+  line-height: 1.2 !important;
   text-transform: uppercase !important;
 }
 
-/* 01 / 02 / 03 保持为 1.52rem */
+/*
+  Our Team 和 Publications 使用灰色。
+*/
+
+.page__content .lab-information p.lab-label {
+  color: #66758a !important;
+}
+
+/*
+  01 / 02 / 03 保持当前大小。
+*/
 
 .page__content .lab-research-item__number {
   font-size: 1.52rem !important;
 }
 
-/* Tablet */
-
-@media (max-width: 800px) {
-  .page__content p.lab-label {
-    font-size: 2.5rem !important;
-  }
-}
-
-/* Mobile：仍保持为数字的约两倍 */
-
 @media (max-width: 520px) {
   .page__content p.lab-label {
-    font-size: 2.5rem !important;
-    line-height: 1 !important;
+    font-size: 1.2rem !important;
   }
 
   .page__content .lab-research-item__number {
