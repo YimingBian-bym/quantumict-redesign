@@ -35,9 +35,10 @@ redirect_from:
   padding: 0 !important;
 }
 
+/* Hide only the default title and metadata. Keep the footer visible. */
+
 .page__title,
-.page__meta,
-.page__footer {
+.page__meta {
   display: none !important;
 }
 
@@ -86,7 +87,7 @@ redirect_from:
 }
 
 /* =========================================================
-   Global variables and shared styles
+   Global styles
    ========================================================= */
 
 .lab-home {
@@ -101,7 +102,7 @@ redirect_from:
   --white: #ffffff;
 
   width: 100%;
-  margin-bottom: 0;
+  margin: 0 !important;
   color: var(--text);
   font-family:
     -apple-system,
@@ -132,16 +133,17 @@ redirect_from:
 }
 
 /*
-  Enlarged to twice the original 0.76rem size:
-  About Us, Research, Our Team, Publications and Join Us
+  About Us / Research / Our Team /
+  Publications / Join Us
 */
+
 .lab-label {
-  margin: 0 0 0.9rem;
+  margin: 0 0 1.15rem;
   color: var(--blue);
-  font-size: 1.52rem;
+  font-size: 3.04rem;
   font-weight: 800;
-  letter-spacing: 0.1em;
-  line-height: 1.3;
+  letter-spacing: 0.06em;
+  line-height: 1.15;
   text-transform: uppercase;
 }
 
@@ -507,10 +509,8 @@ redirect_from:
   border-left: 1px solid var(--line);
 }
 
-/*
-  Enlarged to twice the original 0.76rem size:
-  01, 02 and 03
-*/
+/* 01 / 02 / 03 remain unchanged */
+
 .lab-research-item__number {
   display: block;
   margin-bottom: 0.9rem;
@@ -590,8 +590,8 @@ redirect_from:
    ========================================================= */
 
 .lab-join {
-  margin-bottom: 0;
-  border-bottom: 4px solid #0967df;
+  margin: 0 !important;
+  border: 0 !important;
   background: #ffffff;
 }
 
@@ -603,8 +603,8 @@ redirect_from:
     auto;
   gap: 4rem;
   align-items: center;
-  padding-top: 2.1rem;
-  padding-bottom: 2.1rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .lab-join h2 {
@@ -647,6 +647,69 @@ redirect_from:
 .lab-button--border:hover {
   border-color: var(--navy);
   background: #f5f8fc;
+}
+
+/* =========================================================
+   Original gray footer
+   ========================================================= */
+
+.page__footer {
+  display: block !important;
+  clear: both !important;
+  position: relative !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-top: 1px solid #e1e5ea;
+  background: #f2f3f3 !important;
+}
+
+.page__footer footer {
+  width: min(1240px, calc(100% - 48px)) !important;
+  max-width: none !important;
+  margin: 0 auto !important;
+  padding: 2.4rem 0 !important;
+}
+
+.page__footer-follow {
+  margin: 0 0 1rem !important;
+}
+
+.page__footer-follow ul {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.page__footer-follow li {
+  color: #7c8796;
+}
+
+.page__footer-follow a,
+.page__footer-copyright,
+.page__footer-copyright a {
+  color: #7c8796 !important;
+}
+
+.page__footer-follow a:hover,
+.page__footer-copyright a:hover {
+  color: #005ee8 !important;
+}
+
+.page__footer-copyright {
+  margin: 1rem 0 0 !important;
+  font-size: 0.86rem;
+  line-height: 1.7;
+}
+
+/* Remove possible spacing inserted by the old theme */
+
+.page__inner-wrap::after,
+.page__content::after {
+  margin: 0 !important;
+}
+
+body {
+  padding-bottom: 0 !important;
 }
 
 /* =========================================================
@@ -699,7 +762,7 @@ redirect_from:
 @media (max-width: 800px) {
   .lab-container,
   .masthead__inner-wrap {
-    width: min(100% - 32px, 1240px) !important;
+    width: min(1240px, calc(100% - 32px)) !important;
   }
 
   .lab-hero__inner {
@@ -753,6 +816,10 @@ redirect_from:
   .lab-join .lab-actions {
     grid-column: auto;
   }
+
+  .page__footer footer {
+    width: calc(100% - 32px) !important;
+  }
 }
 
 @media (max-width: 520px) {
@@ -797,13 +864,18 @@ redirect_from:
     font-size: 2.15rem;
   }
 
-  /*
-    Keep section labels enlarged on mobile.
-    Slightly reduced only to avoid overflow.
-  */
-  .lab-label,
+  .lab-label {
+    font-size: 2rem;
+  }
+
   .lab-research-item__number {
     font-size: 1.25rem;
+  }
+
+  .page__footer footer {
+    width: calc(100% - 24px) !important;
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
   }
 }
 </style>
