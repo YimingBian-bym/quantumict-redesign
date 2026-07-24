@@ -10,62 +10,102 @@ redirect_from:
 
 <style>
 /* =========================================================
-   Override the narrow article layout of Academic Pages
+   Academic homepage layout reset
    ========================================================= */
 
 #main {
   width: 100% !important;
-  max-width: 1500px !important;
-  margin: 0 auto !important;
-  padding-right: clamp(20px, 4vw, 64px) !important;
-  padding-left: clamp(20px, 4vw, 64px) !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 #main .page {
   float: none !important;
   width: 100% !important;
   margin: 0 !important;
-  padding-right: 0 !important;
-  padding-left: 0 !important;
+  padding: 0 !important;
 }
 
 #main .page__inner-wrap,
 #main .page__content {
   width: 100% !important;
   max-width: none !important;
-  margin-right: 0 !important;
-  margin-left: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
+
+.page__title,
+.page__meta,
+.page__footer {
+  display: none !important;
+}
+
+/* Header width and typography */
 
 .masthead__inner-wrap {
-  width: 100% !important;
-  max-width: 1500px !important;
-  padding-right: clamp(20px, 4vw, 64px) !important;
-  padding-left: clamp(20px, 4vw, 64px) !important;
+  width: min(1260px, calc(100% - 48px)) !important;
+  max-width: none !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
 }
 
-.page__title {
+.greedy-nav {
+  min-height: 68px;
+  align-items: center;
+  background: #ffffff;
+}
+
+.greedy-nav .site-title {
+  color: #0a2853 !important;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.42rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.greedy-nav a {
+  color: #142b4b;
+}
+
+.greedy-nav .visible-links a {
+  padding-right: 1.1rem;
+  padding-left: 1.1rem;
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.greedy-nav .visible-links a::before {
   display: none;
 }
 
+.masthead {
+  border-bottom: 1px solid #e7ebf1;
+}
+
 /* =========================================================
-   Homepage design variables
+   Global variables
    ========================================================= */
 
 .lab-home {
-  --lab-navy: #081d38;
-  --lab-deep-blue: #123f78;
-  --lab-blue: #2568f5;
-  --lab-light-blue: #dbeaff;
-  --lab-text: #13233b;
-  --lab-muted: #62728a;
-  --lab-surface: #f3f6fb;
-  --lab-border: #dfe7f1;
+  --navy: #092955;
+  --navy-deep: #041d3c;
+  --blue: #005ee8;
+  --blue-light: #dceaff;
+  --text: #183154;
+  --muted: #5f7189;
+  --line: #dce3ec;
+  --surface: #f3f7fc;
+  --white: #ffffff;
 
   width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  color: var(--lab-text);
+  color: var(--text);
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Arial,
+    sans-serif;
 }
 
 .lab-home,
@@ -77,6 +117,43 @@ redirect_from:
   text-decoration: none;
 }
 
+.lab-container {
+  width: min(1240px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.lab-display {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  letter-spacing: -0.035em;
+}
+
+.lab-label {
+  margin: 0 0 0.65rem;
+  color: var(--blue);
+  font-size: 0.76rem;
+  font-weight: 750;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.lab-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--blue) !important;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition:
+    gap 160ms ease,
+    opacity 160ms ease;
+}
+
+.lab-link:hover {
+  gap: 0.72rem;
+  opacity: 0.78;
+}
+
 /* =========================================================
    Hero
    ========================================================= */
@@ -84,119 +161,117 @@ redirect_from:
 .lab-hero {
   position: relative;
   overflow: hidden;
-  margin: 2rem 0 5.5rem;
-  padding: clamp(3.2rem, 6vw, 6rem);
-  border-radius: 1.7rem;
   color: #ffffff;
   background:
     radial-gradient(
-      circle at 90% 10%,
-      rgba(109, 178, 255, 0.48),
+      circle at 84% 26%,
+      rgba(94, 160, 255, 0.4),
       transparent 31%
     ),
-    radial-gradient(
-      circle at 15% 90%,
-      rgba(37, 104, 245, 0.22),
-      transparent 35%
-    ),
     linear-gradient(
-      135deg,
-      #06172e 0%,
-      #103d74 55%,
-      #2568f5 100%
+      112deg,
+      #062957 0%,
+      #06438c 53%,
+      #1768db 100%
     );
-  box-shadow: 0 28px 70px rgba(8, 29, 56, 0.18);
 }
 
 .lab-hero::before {
   position: absolute;
-  top: -180px;
-  right: -150px;
-  width: 430px;
-  height: 430px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  top: -290px;
+  right: -40px;
+  width: 680px;
+  height: 680px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 50%;
   content: "";
 }
 
 .lab-hero::after {
   position: absolute;
-  right: 90px;
-  bottom: -230px;
-  width: 470px;
-  height: 470px;
-  border: 1px solid rgba(255, 255, 255, 0.09);
+  right: 9%;
+  bottom: -360px;
+  width: 720px;
+  height: 720px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
   border-radius: 50%;
   content: "";
 }
 
-.lab-hero__grid {
+.lab-hero__inner {
   position: relative;
   z-index: 2;
   display: grid;
+  min-height: 560px;
   grid-template-columns:
-    minmax(0, 1.2fr)
-    minmax(280px, 0.8fr);
-  gap: clamp(2rem, 6vw, 6rem);
+    minmax(0, 1.05fr)
+    minmax(350px, 0.95fr);
+  gap: 5rem;
   align-items: center;
+  padding-top: 4.8rem;
+  padding-bottom: 4.8rem;
 }
 
-.lab-eyebrow,
-.lab-kicker {
-  margin: 0 0 1rem;
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.16em;
+.lab-hero__institution {
+  margin: 0 0 1.15rem;
+  color: #d4e5ff;
+  font-size: 0.77rem;
+  font-weight: 750;
+  letter-spacing: 0.18em;
+  line-height: 1.7;
   text-transform: uppercase;
 }
 
-.lab-eyebrow {
-  color: #c8ddff;
-}
-
 .lab-hero h1 {
-  max-width: 750px;
+  max-width: 730px;
   margin: 0;
   color: #ffffff;
-  font-size: clamp(3rem, 5.5vw, 5.2rem);
-  line-height: 1.03;
-  letter-spacing: -0.05em;
+  font-size: clamp(3.8rem, 6.2vw, 6.3rem);
+  line-height: 0.94;
+}
+
+.lab-hero__accent {
+  width: 42px;
+  height: 2px;
+  margin: 1.6rem 0 1.2rem;
+  background: #75b2ff;
 }
 
 .lab-hero__lead {
-  max-width: 720px;
-  margin: 1.5rem 0 0;
+  max-width: 680px;
+  margin: 0;
   color: #ffffff;
-  font-size: clamp(1.3rem, 2.2vw, 1.8rem);
-  font-weight: 600;
-  line-height: 1.45;
+  font-size: 1.14rem;
+  font-weight: 650;
+  line-height: 1.6;
 }
 
 .lab-hero__description {
-  max-width: 680px;
-  margin: 1.2rem 0 0;
-  color: #d4e3f7;
-  font-size: 1.04rem;
-  line-height: 1.85;
+  max-width: 650px;
+  margin: 1rem 0 0;
+  color: #d3e0f2;
+  font-size: 1rem;
+  line-height: 1.8;
 }
 
 .lab-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.9rem;
-  margin-top: 2.2rem;
+  margin-top: 2rem;
 }
 
 .lab-button {
   display: inline-flex;
-  min-height: 46px;
+  min-height: 48px;
   align-items: center;
-  justify-content: center;
-  padding: 0.82rem 1.25rem;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 0.75rem 1.2rem;
   border: 1px solid transparent;
-  border-radius: 0.72rem;
-  font-size: 0.93rem;
-  font-weight: 750;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  font-weight: 650;
   transition:
     transform 160ms ease,
     background 160ms ease,
@@ -207,52 +282,79 @@ redirect_from:
   transform: translateY(-2px);
 }
 
-.lab-button--primary {
-  color: #12315a !important;
+.lab-button--light {
+  color: #082a56 !important;
   background: #ffffff;
 }
 
-.lab-button--primary:hover {
-  background: #edf5ff;
+.lab-button--light:hover {
+  background: #edf4ff;
 }
 
-.lab-button--secondary {
+.lab-button--outline {
   color: #ffffff !important;
-  border-color: rgba(255, 255, 255, 0.42);
-  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.68);
+  background: rgba(255, 255, 255, 0.03);
 }
 
-.lab-button--secondary:hover {
-  border-color: rgba(255, 255, 255, 0.7);
-  background: rgba(255, 255, 255, 0.14);
+.lab-button--outline:hover {
+  border-color: #ffffff;
+  background: rgba(255, 255, 255, 0.09);
 }
 
 /* =========================================================
-   Scientific visual
+   Scientific orbital visual
    ========================================================= */
 
 .lab-visual {
   position: relative;
-  width: min(340px, 100%);
+  width: min(420px, 100%);
   aspect-ratio: 1;
   margin: auto;
-  border: 1px solid rgba(255, 255, 255, 0.23);
+}
+
+.lab-visual::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 82%;
+  height: 45%;
+  transform: translate(-50%, -50%) rotate(-22deg);
+  border: 1px solid rgba(255, 255, 255, 0.17);
   border-radius: 50%;
+  content: "";
+}
+
+.lab-visual::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 86%;
+  height: 37%;
+  transform: translate(-50%, -50%) rotate(44deg);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  content: "";
 }
 
 .lab-orbit {
   position: absolute;
-  inset: 14%;
-  border: 1px solid rgba(255, 255, 255, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 50%;
 }
 
-.lab-orbit--two {
-  inset: 28%;
+.lab-orbit--outer {
+  inset: 6%;
+  border-style: dotted;
 }
 
-.lab-orbit--three {
-  inset: 40%;
+.lab-orbit--middle {
+  inset: 20%;
+}
+
+.lab-orbit--inner {
+  inset: 34%;
+  border-style: dotted;
 }
 
 .lab-core {
@@ -260,358 +362,424 @@ redirect_from:
   top: 50%;
   left: 50%;
   display: grid;
-  width: 6.2rem;
-  height: 6.2rem;
+  width: 7.5rem;
+  height: 7.5rem;
   place-items: center;
   transform: translate(-50%, -50%);
+  border: 1px solid rgba(255, 255, 255, 0.58);
   border-radius: 50%;
-  color: #153964;
-  background: #ffffff;
-  box-shadow: 0 0 55px rgba(171, 211, 255, 0.7);
-  font-size: 2.3rem;
-  font-weight: 850;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow:
+    0 0 55px rgba(146, 193, 255, 0.25),
+    inset 0 0 30px rgba(255, 255, 255, 0.08);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 4.1rem;
+  font-weight: 400;
 }
 
 .lab-particle {
   position: absolute;
-  width: 0.95rem;
-  height: 0.95rem;
+  width: 0.76rem;
+  height: 0.76rem;
   border-radius: 50%;
   background: #ffffff;
-  box-shadow: 0 0 22px rgba(255, 255, 255, 0.95);
+  box-shadow:
+    0 0 9px rgba(255, 255, 255, 0.95),
+    0 0 25px rgba(125, 181, 255, 0.95);
 }
 
 .lab-particle--one {
-  top: 11%;
-  left: 47%;
+  top: 8%;
+  left: 39%;
 }
 
 .lab-particle--two {
-  right: 8%;
-  bottom: 29%;
+  top: 31%;
+  right: 7%;
 }
 
 .lab-particle--three {
-  bottom: 12%;
-  left: 22%;
+  right: 34%;
+  bottom: 6%;
+}
+
+.lab-particle--four {
+  top: 57%;
+  left: 7%;
+  width: 0.48rem;
+  height: 0.48rem;
+}
+
+.lab-stars {
+  position: absolute;
+  inset: 0;
+  opacity: 0.5;
+  background-image:
+    radial-gradient(circle, #ffffff 1px, transparent 1.5px),
+    radial-gradient(circle, #ffffff 1px, transparent 1.5px);
+  background-position:
+    0 0,
+    22px 27px;
+  background-size:
+    48px 48px,
+    61px 61px;
+  mask-image: radial-gradient(circle, #000 0%, transparent 72%);
 }
 
 /* =========================================================
-   General sections
-   ========================================================= */
-
-.lab-section {
-  margin: 0 0 6rem;
-}
-
-.lab-section__heading {
-  max-width: 850px;
-  margin-bottom: 2.4rem;
-}
-
-.lab-kicker {
-  color: var(--lab-blue);
-}
-
-.lab-section h2 {
-  margin: 0;
-  color: var(--lab-navy);
-  font-size: clamp(2rem, 3.3vw, 3rem);
-  line-height: 1.18;
-  letter-spacing: -0.025em;
-}
-
-.lab-section__intro {
-  margin: 1.2rem 0 0;
-  color: var(--lab-muted);
-  font-size: 1.08rem;
-  line-height: 1.9;
-}
-
-/* =========================================================
-   About: horizontal desktop layout
+   About
    ========================================================= */
 
 .lab-about {
-  display: grid;
-  grid-template-columns:
-    minmax(300px, 0.95fr)
-    minmax(0, 1.05fr);
-  gap: clamp(3rem, 7vw, 7rem);
-  align-items: start;
+  padding: 3.6rem 0 3rem;
+  border-bottom: 1px solid var(--line);
 }
 
-.lab-about .lab-section__intro {
-  margin-top: 0;
-}
-
-.lab-link {
-  display: inline-flex;
-  align-items: center;
-  margin-top: 1.25rem;
-  color: var(--lab-blue) !important;
-  font-size: 0.95rem;
-  font-weight: 750;
-  transition: transform 150ms ease;
-}
-
-.lab-link:hover {
-  transform: translateX(3px);
-}
-
-/* =========================================================
-   Research cards
-   ========================================================= */
-
-.lab-research-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.6rem;
-}
-
-.lab-card {
-  display: flex;
-  min-height: 300px;
-  flex-direction: column;
-  padding: 2rem;
-  border: 1px solid var(--lab-border);
-  border-radius: 1.1rem;
-  background: #ffffff;
-  box-shadow: 0 16px 42px rgba(15, 35, 65, 0.065);
-  transition:
-    transform 170ms ease,
-    box-shadow 170ms ease,
-    border-color 170ms ease;
-}
-
-.lab-card:hover {
-  transform: translateY(-5px);
-  border-color: #bfd3f5;
-  box-shadow: 0 22px 55px rgba(15, 35, 65, 0.12);
-}
-
-.lab-card__number {
-  color: var(--lab-blue);
-  font-size: 0.8rem;
-  font-weight: 850;
-  letter-spacing: 0.14em;
-}
-
-.lab-card h3 {
-  margin: 1.2rem 0 0.85rem;
-  color: var(--lab-navy);
-  font-size: 1.35rem;
-  line-height: 1.32;
-}
-
-.lab-card p {
-  margin: 0;
-  color: var(--lab-muted);
-  line-height: 1.8;
-}
-
-.lab-card .lab-link {
-  margin-top: auto;
-  padding-top: 1.5rem;
-}
-
-/* =========================================================
-   Team and publications
-   ========================================================= */
-
-.lab-feature {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.7rem;
-}
-
-.lab-feature__panel {
-  min-height: 290px;
-  padding: clamp(2rem, 4vw, 3rem);
-  border: 1px solid #e5ebf3;
-  border-radius: 1.2rem;
-  background: var(--lab-surface);
-}
-
-.lab-feature__panel h3 {
-  max-width: 470px;
-  margin: 0;
-  color: var(--lab-navy);
-  font-size: clamp(1.5rem, 2.3vw, 2.05rem);
-  line-height: 1.28;
-}
-
-.lab-feature__panel p {
-  max-width: 560px;
-  margin: 1rem 0 0;
-  color: var(--lab-muted);
-  line-height: 1.8;
-}
-
-/* =========================================================
-   Join us: horizontal desktop layout
-   ========================================================= */
-
-.lab-join {
-  padding: clamp(2.5rem, 5vw, 4.5rem);
-  border-radius: 1.4rem;
-  color: #ffffff;
-  background:
-    radial-gradient(
-      circle at 95% 10%,
-      rgba(64, 136, 255, 0.25),
-      transparent 32%
-    ),
-    var(--lab-navy);
-}
-
-.lab-join__inner {
+.lab-about__grid {
   display: grid;
   grid-template-columns:
     minmax(0, 1fr)
-    auto;
-  gap: 3rem;
-  align-items: end;
+    minmax(340px, 0.95fr);
+  gap: 7rem;
+  align-items: start;
 }
 
-.lab-join h2 {
-  max-width: 750px;
-  color: #ffffff;
+.lab-about h2 {
+  max-width: 680px;
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(2.2rem, 3.4vw, 3.45rem);
+  line-height: 1.12;
 }
 
-.lab-join p {
-  max-width: 760px;
-  margin: 1.1rem 0 0;
-  color: #d2deed;
-  font-size: 1.04rem;
-  line-height: 1.8;
+.lab-about__content {
+  padding-top: 0.35rem;
 }
 
-.lab-join .lab-actions {
-  justify-content: flex-end;
-  margin-top: 0;
+.lab-about__content p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.85;
 }
 
 /* =========================================================
-   Responsive layout
+   Research
    ========================================================= */
 
-@media (max-width: 900px) {
-  #main,
-  .masthead__inner-wrap {
-    padding-right: 24px !important;
-    padding-left: 24px !important;
-  }
+.lab-research {
+  padding: 2.2rem 0 3.8rem;
+}
 
-  .lab-hero {
-    padding: 3.5rem 2.5rem;
-  }
+.lab-section-title {
+  margin-bottom: 0.25rem;
+}
 
-  .lab-hero__grid {
+.lab-section-title h2 {
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(2rem, 3vw, 3.05rem);
+  line-height: 1.15;
+}
+
+.lab-research__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 0.2rem;
+}
+
+.lab-research-item {
+  min-height: 210px;
+  padding: 0.75rem 3.5rem 0 0;
+}
+
+.lab-research-item + .lab-research-item {
+  padding-left: 3.5rem;
+  border-left: 1px solid var(--line);
+}
+
+.lab-research-item__number {
+  display: block;
+  margin-bottom: 0.75rem;
+  color: var(--blue);
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.lab-research-item h3 {
+  margin: 0 0 0.65rem;
+  color: var(--navy);
+  font-size: 1.16rem;
+  line-height: 1.4;
+}
+
+.lab-research-item p {
+  max-width: 350px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.93rem;
+  line-height: 1.72;
+}
+
+.lab-research-item .lab-link {
+  margin-top: 1.1rem;
+}
+
+/* =========================================================
+   Team and publications band
+   ========================================================= */
+
+.lab-information {
+  background:
+    linear-gradient(
+      90deg,
+      #f4f7fb 0%,
+      #eef4fb 50%,
+      #f5f8fc 100%
+    );
+}
+
+.lab-information__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.lab-information__item {
+  min-height: 185px;
+  padding: 2.2rem 4rem 2.2rem 0;
+}
+
+.lab-information__item + .lab-information__item {
+  padding-right: 0;
+  padding-left: 4rem;
+  border-left: 1px solid #d8e1ed;
+}
+
+.lab-information h3 {
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(1.65rem, 2.3vw, 2.25rem);
+  line-height: 1.25;
+}
+
+.lab-information p {
+  max-width: 530px;
+  margin: 0.7rem 0 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.75;
+}
+
+/* =========================================================
+   Join us
+   ========================================================= */
+
+.lab-join {
+  border-bottom: 4px solid #0967df;
+  background: #ffffff;
+}
+
+.lab-join__grid {
+  display: grid;
+  grid-template-columns:
+    minmax(300px, 0.85fr)
+    minmax(390px, 1.05fr)
+    auto;
+  gap: 4rem;
+  align-items: center;
+  padding-top: 2.1rem;
+  padding-bottom: 2.1rem;
+}
+
+.lab-join h2 {
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(1.8rem, 2.7vw, 2.65rem);
+  line-height: 1.2;
+}
+
+.lab-join__description {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.75;
+}
+
+.lab-join .lab-actions {
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  margin: 0;
+}
+
+.lab-button--navy {
+  color: #ffffff !important;
+  border-color: var(--navy);
+  background: var(--navy);
+}
+
+.lab-button--navy:hover {
+  border-color: #064891;
+  background: #064891;
+}
+
+.lab-button--border {
+  color: var(--navy) !important;
+  border-color: #8294aa;
+  background: #ffffff;
+}
+
+.lab-button--border:hover {
+  border-color: var(--navy);
+  background: #f5f8fc;
+}
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+
+@media (max-width: 1050px) {
+  .lab-hero__inner {
     grid-template-columns:
-      minmax(0, 1.15fr)
-      minmax(230px, 0.85fr);
+      minmax(0, 1.1fr)
+      minmax(280px, 0.9fr);
     gap: 2.5rem;
   }
 
-  .lab-visual {
-    width: 260px;
+  .lab-hero h1 {
+    font-size: clamp(3.4rem, 6.4vw, 5rem);
   }
 
-  .lab-core {
-    width: 5.2rem;
-    height: 5.2rem;
+  .lab-about__grid {
+    gap: 3.5rem;
   }
 
-  .lab-research-grid {
-    gap: 1rem;
+  .lab-research-item {
+    padding-right: 2rem;
   }
 
-  .lab-card {
-    padding: 1.5rem;
-  }
-}
-
-@media (max-width: 760px) {
-  #main,
-  .masthead__inner-wrap {
-    padding-right: 16px !important;
-    padding-left: 16px !important;
+  .lab-research-item + .lab-research-item {
+    padding-left: 2rem;
   }
 
-  .lab-hero {
-    margin-top: 1rem;
-    padding: 3rem 1.6rem;
+  .lab-information__item {
+    padding-right: 2.5rem;
   }
 
-  .lab-hero__grid,
-  .lab-about,
-  .lab-feature,
-  .lab-join__inner {
-    grid-template-columns: 1fr;
+  .lab-information__item + .lab-information__item {
+    padding-left: 2.5rem;
   }
 
-  .lab-visual {
-    width: 230px;
-    margin-top: 1.5rem;
-  }
-
-  .lab-research-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .lab-card {
-    min-height: auto;
+  .lab-join__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
   }
 
   .lab-join .lab-actions {
+    grid-column: 1 / -1;
     justify-content: flex-start;
-    margin-top: 1rem;
-  }
-
-  .lab-section {
-    margin-bottom: 4.5rem;
   }
 }
 
-@media (max-width: 480px) {
-  #main,
+@media (max-width: 800px) {
+  .lab-container,
   .masthead__inner-wrap {
-    padding-right: 12px !important;
-    padding-left: 12px !important;
+    width: min(100% - 32px, 1240px) !important;
   }
 
-  .lab-hero {
-    padding: 2.6rem 1.25rem;
-    border-radius: 1.05rem;
-  }
-
-  .lab-hero h1 {
-    font-size: 2.75rem;
+  .lab-hero__inner {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    padding-top: 4rem;
+    padding-bottom: 3.5rem;
   }
 
   .lab-visual {
-    width: 195px;
+    width: min(340px, 80%);
+  }
+
+  .lab-about__grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .lab-research__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lab-research-item,
+  .lab-research-item + .lab-research-item {
+    min-height: auto;
+    padding: 1.8rem 0;
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .lab-information__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lab-information__item,
+  .lab-information__item + .lab-information__item {
+    min-height: auto;
+    padding: 2rem 0;
+    border-left: 0;
+  }
+
+  .lab-information__item + .lab-information__item {
+    border-top: 1px solid #d8e1ed;
+  }
+
+  .lab-join__grid {
+    grid-template-columns: 1fr;
+    gap: 1.3rem;
+  }
+
+  .lab-join .lab-actions {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 520px) {
+  .lab-container,
+  .masthead__inner-wrap {
+    width: calc(100% - 24px) !important;
+  }
+
+  .lab-hero h1 {
+    font-size: 3.1rem;
+  }
+
+  .lab-hero__description {
+    font-size: 0.94rem;
+  }
+
+  .lab-visual {
+    width: 240px;
   }
 
   .lab-core {
-    width: 4.5rem;
-    height: 4.5rem;
-    font-size: 1.8rem;
+    width: 5.5rem;
+    height: 5.5rem;
+    font-size: 3rem;
   }
 
-  .lab-feature__panel,
-  .lab-join {
-    padding: 1.7rem;
-  }
-
-  .lab-actions {
+  .lab-actions,
+  .lab-join .lab-actions {
     align-items: stretch;
     flex-direction: column;
   }
 
   .lab-button {
     width: 100%;
+  }
+
+  .lab-about {
+    padding-top: 2.6rem;
+  }
+
+  .lab-about h2 {
+    font-size: 2.15rem;
   }
 }
 </style>
@@ -620,14 +788,20 @@ redirect_from:
 
   <!-- Hero -->
   <section class="lab-hero">
-    <div class="lab-hero__grid">
+    <div class="lab-container lab-hero__inner">
 
-      <div>
-        <p class="lab-eyebrow">
+      <div class="lab-hero__content">
+
+        <p class="lab-hero__institution">
           HFNL · University of Science and Technology of China
         </p>
 
-        <h1>QuantumICT Research Group</h1>
+        <h1 class="lab-display">
+          QuantumICT<br>
+          Research Group
+        </h1>
+
+        <div class="lab-hero__accent"></div>
 
         <p class="lab-hero__lead">
           High-performance computational methods for scientific discovery.
@@ -640,162 +814,199 @@ redirect_from:
         </p>
 
         <div class="lab-actions">
+
           <a
-            class="lab-button lab-button--primary"
+            class="lab-button lab-button--light"
             href="{{ '/research/' | relative_url }}"
           >
-            Explore Our Research
+            <span>Explore Our Research</span>
+            <span aria-hidden="true">→</span>
           </a>
 
           <a
-            class="lab-button lab-button--secondary"
+            class="lab-button lab-button--outline"
             href="{{ '/people/' | relative_url }}"
           >
-            Meet the Group
+            <span>Meet the Group</span>
+            <span aria-hidden="true">→</span>
           </a>
+
         </div>
       </div>
 
       <div class="lab-visual" aria-hidden="true">
-        <div class="lab-orbit"></div>
-        <div class="lab-orbit lab-orbit--two"></div>
-        <div class="lab-orbit lab-orbit--three"></div>
+
+        <div class="lab-stars"></div>
+
+        <div class="lab-orbit lab-orbit--outer"></div>
+        <div class="lab-orbit lab-orbit--middle"></div>
+        <div class="lab-orbit lab-orbit--inner"></div>
 
         <div class="lab-core">Q</div>
 
         <div class="lab-particle lab-particle--one"></div>
         <div class="lab-particle lab-particle--two"></div>
         <div class="lab-particle lab-particle--three"></div>
+        <div class="lab-particle lab-particle--four"></div>
+
       </div>
 
     </div>
   </section>
 
   <!-- About -->
-  <section class="lab-section lab-about">
+  <section class="lab-about">
+    <div class="lab-container lab-about__grid">
 
-    <div>
-      <p class="lab-kicker">About Us</p>
+      <div>
+        <p class="lab-label">About Us</p>
 
-      <h2>
-        Developing computational tools to understand complex scientific
-        systems
-      </h2>
+        <h2 class="lab-display">
+          Developing computational tools to understand complex
+          scientific systems.
+        </h2>
+      </div>
+
+      <div class="lab-about__content">
+
+        <p>
+          QuantumICT is a research group at HFNL and USTC. Our work
+          focuses on developing efficient computational methods and
+          applying them to scientific problems across multiple time
+          and length scales.
+        </p>
+
+        <a
+          class="lab-link"
+          href="{{ '/research/' | relative_url }}"
+        >
+          <span>Discover our research</span>
+          <span aria-hidden="true">→</span>
+        </a>
+
+      </div>
+
     </div>
-
-    <div>
-      <p class="lab-section__intro">
-        QuantumICT is a research group at HFNL and USTC. Our work focuses
-        on developing efficient computational methods and applying them
-        to scientific problems across multiple time and length scales.
-      </p>
-
-      <a
-        class="lab-link"
-        href="{{ '/research/' | relative_url }}"
-      >
-        Discover our research →
-      </a>
-    </div>
-
   </section>
 
   <!-- Research -->
-  <section class="lab-section">
+  <section class="lab-research">
+    <div class="lab-container">
 
-    <div class="lab-section__heading">
-      <p class="lab-kicker">Research</p>
-      <h2>Our main research directions</h2>
-    </div>
+      <div class="lab-section-title">
 
-    <div class="lab-research-grid">
+        <p class="lab-label">Research</p>
 
-      <article class="lab-card">
-        <span class="lab-card__number">01</span>
+        <h2 class="lab-display">
+          Our main research directions
+        </h2>
 
-        <h3>High-Performance Computing</h3>
+      </div>
 
-        <p>
-          Efficient algorithms and large-scale computational approaches
-          for scientific simulations and data-intensive research.
-        </p>
+      <div class="lab-research__grid">
 
-        <a
-          class="lab-link"
-          href="{{ '/research/' | relative_url }}"
-        >
-          Learn more →
-        </a>
-      </article>
+        <article class="lab-research-item">
 
-      <article class="lab-card">
-        <span class="lab-card__number">02</span>
+          <span class="lab-research-item__number">01</span>
 
-        <h3>First-Principles Methods</h3>
+          <h3>High-Performance Computing</h3>
 
-        <p>
-          Development and implementation of atomistic methods based on
-          fundamental physical principles.
-        </p>
+          <p>
+            Efficient algorithms and large-scale computational
+            approaches for scientific simulations and
+            data-intensive research.
+          </p>
 
-        <a
-          class="lab-link"
-          href="{{ '/research/' | relative_url }}"
-        >
-          Learn more →
-        </a>
-      </article>
+          <a
+            class="lab-link"
+            href="{{ '/research/' | relative_url }}"
+          >
+            <span>Learn more</span>
+            <span aria-hidden="true">→</span>
+          </a>
 
-      <article class="lab-card">
-        <span class="lab-card__number">03</span>
+        </article>
 
-        <h3>Kinetic Monte Carlo</h3>
+        <article class="lab-research-item">
 
-        <p>
-          Computational methods for investigating dynamical processes
-          over extended time scales.
-        </p>
+          <span class="lab-research-item__number">02</span>
 
-        <a
-          class="lab-link"
-          href="{{ '/research/' | relative_url }}"
-        >
-          Learn more →
-        </a>
-      </article>
+          <h3>First-Principles Methods</h3>
 
+          <p>
+            Development and implementation of atomistic methods
+            based on fundamental physical principles.
+          </p>
+
+          <a
+            class="lab-link"
+            href="{{ '/research/' | relative_url }}"
+          >
+            <span>Learn more</span>
+            <span aria-hidden="true">→</span>
+          </a>
+
+        </article>
+
+        <article class="lab-research-item">
+
+          <span class="lab-research-item__number">03</span>
+
+          <h3>Kinetic Monte Carlo</h3>
+
+          <p>
+            Computational methods for investigating dynamic
+            processes over extended time scales.
+          </p>
+
+          <a
+            class="lab-link"
+            href="{{ '/research/' | relative_url }}"
+          >
+            <span>Learn more</span>
+            <span aria-hidden="true">→</span>
+          </a>
+
+        </article>
+
+      </div>
     </div>
   </section>
 
   <!-- Team and publications -->
-  <section class="lab-section">
+  <section class="lab-information">
+    <div class="lab-container lab-information__grid">
 
-    <div class="lab-feature">
+      <div class="lab-information__item">
 
-      <div class="lab-feature__panel">
-        <p class="lab-kicker">Our Team</p>
+        <p class="lab-label">Our Team</p>
 
-        <h3>
+        <h3 class="lab-display">
           Researchers working across computation and physical science
         </h3>
 
         <p>
-          Learn more about the principal investigator, current students,
-          and alumni of the group.
+          Learn more about the principal investigator,
+          current students, and alumni of the group.
         </p>
 
         <a
           class="lab-link"
           href="{{ '/people/' | relative_url }}"
         >
-          View all members →
+          <span>View all members</span>
+          <span aria-hidden="true">→</span>
         </a>
+
       </div>
 
-      <div class="lab-feature__panel">
-        <p class="lab-kicker">Publications</p>
+      <div class="lab-information__item">
 
-        <h3>Explore our research output</h3>
+        <p class="lab-label">Publications</p>
+
+        <h3 class="lab-display">
+          Explore our research output
+        </h3>
 
         <p>
           Browse publications covering method development,
@@ -806,44 +1017,53 @@ redirect_from:
           class="lab-link"
           href="{{ '/publications/' | relative_url }}"
         >
-          View publications →
+          <span>View publications</span>
+          <span aria-hidden="true">→</span>
         </a>
+
       </div>
 
     </div>
   </section>
 
   <!-- Join us -->
-  <section class="lab-section lab-join">
-
-    <div class="lab-join__inner">
+  <section class="lab-join">
+    <div class="lab-container lab-join__grid">
 
       <div>
-        <p class="lab-eyebrow">Join Us</p>
 
-        <h2>Work with the QuantumICT Group</h2>
+        <p class="lab-label">Join Us</p>
 
-        <p>
-          We welcome motivated students and researchers interested in
-          computational science, high-performance simulation, and
-          scientific method development.
-        </p>
+        <h2 class="lab-display">
+          Work with the QuantumICT Group.
+        </h2>
+
       </div>
 
+      <p class="lab-join__description">
+        We welcome motivated students and researchers interested
+        in computational science, high-performance simulation,
+        and scientific method development.
+      </p>
+
       <div class="lab-actions">
+
         <a
-          class="lab-button lab-button--primary"
+          class="lab-button lab-button--navy"
           href="{{ '/join-us/' | relative_url }}"
         >
-          Opportunities
+          <span>Opportunities</span>
+          <span aria-hidden="true">→</span>
         </a>
 
         <a
-          class="lab-button lab-button--secondary"
+          class="lab-button lab-button--border"
           href="mailto:shh@ustc.edu.cn"
         >
-          Contact Us
+          <span>Contact Us</span>
+          <span aria-hidden="true">→</span>
         </a>
+
       </div>
 
     </div>
