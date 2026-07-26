@@ -126,6 +126,14 @@ toc: false
 
 /* Member rows */
 
+.people-subheading {
+  margin: 2.1rem 0 0.35rem;
+  color: #4c607a;
+  font-size: 1.08rem;
+  font-weight: 650;
+  letter-spacing: 0.01em;
+}
+
 .people-list {
   margin: 0;
   padding: 0;
@@ -280,6 +288,8 @@ computational approaches.
 
 <h2>Current Members</h2>
 
+<h3 class="people-subheading">Doctoral Students</h3>
+
 <ul class="people-list">
   <li class="people-row">
     <div class="people-row__name">
@@ -290,22 +300,8 @@ computational approaches.
   </li>
 
   <li class="people-row">
-    <div class="people-row__name">
-      <a class="people-row__link" href="{{ '/members/zhaobowen' | relative_url }}">Bowen Zhao</a>
-    </div>
-    <div class="people-row__role">Master's Student</div>
-    <div class="people-row__meta">Member profile</div>
-  </li>
-
-  <li class="people-row">
     <div class="people-row__name">Daiyou Xie</div>
     <div class="people-row__role">Doctoral Student</div>
-    <div class="people-row__meta people-empty">—</div>
-  </li>
-
-  <li class="people-row">
-    <div class="people-row__name">Jiexuan Zhou</div>
-    <div class="people-row__role">Master's Student</div>
     <div class="people-row__meta people-empty">—</div>
   </li>
 
@@ -316,17 +312,41 @@ computational approaches.
   </li>
 
   <li class="people-row">
-    <div class="people-row__name">Pengyu Zhou</div>
-    <div class="people-row__role">Master's Student</div>
-    <div class="people-row__meta people-empty">—</div>
-  </li>
-
-  <li class="people-row">
     <div class="people-row__name">
       <a class="people-row__link" href="{{ '/members/xuzhiqian' | relative_url }}">Zhiqian Xu</a>
     </div>
     <div class="people-row__role">Doctoral Student</div>
     <div class="people-row__meta">Member profile</div>
+  </li>
+
+  <li class="people-row">
+    <div class="people-row__name">Yumeng Zhou</div>
+    <div class="people-row__role">Doctoral Student</div>
+    <div class="people-row__meta people-empty">—</div>
+  </li>
+</ul>
+
+<h3 class="people-subheading">Master's Students</h3>
+
+<ul class="people-list">
+  <li class="people-row">
+    <div class="people-row__name">
+      <a class="people-row__link" href="{{ '/members/zhaobowen' | relative_url }}">Bowen Zhao</a>
+    </div>
+    <div class="people-row__role">Master's Student</div>
+    <div class="people-row__meta">Member profile</div>
+  </li>
+
+  <li class="people-row">
+    <div class="people-row__name">Jiexuan Zhou</div>
+    <div class="people-row__role">Master's Student</div>
+    <div class="people-row__meta people-empty">—</div>
+  </li>
+
+  <li class="people-row">
+    <div class="people-row__name">Pengyu Zhou</div>
+    <div class="people-row__role">Master's Student</div>
+    <div class="people-row__meta people-empty">—</div>
   </li>
 
   <li class="people-row">
@@ -340,12 +360,6 @@ computational approaches.
   <li class="people-row">
     <div class="people-row__name">Shitian Wan</div>
     <div class="people-row__role">Master's Student</div>
-    <div class="people-row__meta people-empty">—</div>
-  </li>
-
-  <li class="people-row">
-    <div class="people-row__name">Yumeng Zhou</div>
-    <div class="people-row__role">Doctoral Student</div>
     <div class="people-row__meta people-empty">—</div>
   </li>
 
