@@ -66,22 +66,16 @@ toc: false
 
 .research-simple .research-number {
   display: inline-block;
-  min-width: 2.4rem;
-  margin-right: 0.45rem;
+  min-width: 3.35rem;
+  margin-right: 0.6rem;
   color: #2f6fbd;
-  font-size: 0.88rem;
-  font-weight: 750;
-  letter-spacing: 0.08em;
-  vertical-align: middle;
+  font-size: 1.42rem;
+  font-weight: 720;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  vertical-align: -0.08em;
 }
 
-.research-simple .research-note {
-  margin: 2.5rem 0 0;
-  padding: 1.2rem 1.4rem;
-  color: #4f6075;
-  background: #f5f7fa;
-  border-left: 3px solid #5e8fc8;
-}
 
 .research-simple .research-links {
   margin-top: 3.5rem;
@@ -183,12 +177,10 @@ Machine-learning and data-driven methods can complement physical models, acceler
 
 Method development and software implementation are closely connected. We aim to translate theoretical and numerical advances into reliable computational tools that can be applied to real scientific problems.
 
-<div class="research-note">
-The current page is a first-draft summary based on the previous QuantumICT website and publicly available descriptions of the group’s research. The formal names, scope, and emphasis of each direction should be reviewed by the principal investigator before final publication.
-</div>
 
 <div class="research-links">
-For research articles and related results, please visit the [Publications]({{ '/publications/' | relative_url }}) page.
+  For research articles and related results, please visit the
+  <a href="{{ '/publications/' | relative_url }}">Publications</a> page.
 </div>
 
 </div>
