@@ -51,24 +51,25 @@ toc: false
 
 .people-lead {
   display: grid;
-  grid-template-columns: minmax(250px, 0.78fr) minmax(0, 1.22fr);
-  gap: clamp(2.5rem, 6vw, 5rem);
+  grid-template-columns: minmax(210px, 0.62fr) minmax(0, 1.38fr);
+  gap: clamp(3rem, 7vw, 6rem);
   align-items: start;
   padding: 2rem 0 2.4rem;
   border-bottom: 1px solid #e3e8ef;
 }
 
 .people-lead__profile {
-  display: grid;
-  grid-template-columns: 118px minmax(0, 1fr);
-  gap: 1.25rem;
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
 }
 
 .people-lead__photo {
   display: block;
-  width: 118px;
-  height: 148px;
+  width: 180px;
+  height: 225px;
+  margin: 0 0 1.35rem;
   object-fit: cover;
   object-position: center top;
   border-radius: 2px;
@@ -98,7 +99,7 @@ toc: false
 
 .people-lead__email {
   color: #4e5f75;
-  overflow-wrap: anywhere;
+  white-space: nowrap;
 }
 
 .people-lead__details {
@@ -204,13 +205,15 @@ toc: false
   }
 
   .people-lead__profile {
-    grid-template-columns: 96px minmax(0, 1fr);
-    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .people-lead__photo {
-    width: 96px;
-    height: 120px;
+    width: 150px;
+    height: 188px;
+    margin-bottom: 1.15rem;
   }
 
   .people-row,
