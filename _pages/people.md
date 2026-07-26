@@ -51,10 +51,28 @@ toc: false
 
 .people-lead {
   display: grid;
-  grid-template-columns: minmax(220px, 0.72fr) minmax(0, 1.28fr);
-  gap: clamp(2rem, 6vw, 5rem);
-  padding: 2rem 0 2.2rem;
+  grid-template-columns: minmax(250px, 0.78fr) minmax(0, 1.22fr);
+  gap: clamp(2.5rem, 6vw, 5rem);
+  align-items: start;
+  padding: 2rem 0 2.4rem;
   border-bottom: 1px solid #e3e8ef;
+}
+
+.people-lead__profile {
+  display: grid;
+  grid-template-columns: 118px minmax(0, 1fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.people-lead__photo {
+  display: block;
+  width: 118px;
+  height: 148px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 2px;
+  background: #edf1f5;
 }
 
 .people-lead__name {
@@ -65,11 +83,22 @@ toc: false
   line-height: 1.3;
 }
 
-.people-lead__role {
-  margin: 0.45rem 0 0;
+.people-lead__meta {
+  margin: 0.7rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.people-lead__meta li {
+  margin: 0 0 0.42rem;
   color: #6a778a;
-  font-size: 0.94rem;
-  line-height: 1.55;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.people-lead__email {
+  color: #4e5f75;
+  overflow-wrap: anywhere;
 }
 
 .people-lead__details {
@@ -171,7 +200,17 @@ toc: false
 
   .people-lead {
     grid-template-columns: 1fr;
-    gap: 1.2rem;
+    gap: 1.8rem;
+  }
+
+  .people-lead__profile {
+    grid-template-columns: 96px minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .people-lead__photo {
+    width: 96px;
+    height: 120px;
   }
 
   .people-row,
@@ -199,11 +238,25 @@ computational approaches.
 <h2>Principal Investigator</h2>
 
 <section class="people-lead">
-  <div>
-    <h3 class="people-lead__name">
-      <a href="https://faculty.ustc.edu.cn/shanghonghui/en/index.htm">Honghui Shang</a>
-    </h3>
-    <p class="people-lead__role">Principal Investigator</p>
+  <div class="people-lead__profile">
+    <img
+      class="people-lead__photo"
+      src="{{ '/images/people/honghui-shang.jpg' | relative_url }}"
+      alt="Honghui Shang"
+    >
+
+    <div>
+      <h3 class="people-lead__name">
+        <a href="https://shanghui.github.io/">Honghui Shang</a>
+      </h3>
+
+      <ul class="people-lead__meta">
+        <li>Professor at USTC</li>
+        <li>Hefei, China</li>
+        <li class="people-lead__email">shh@ustc.edu.cn</li>
+        <li><a href="https://orcid.org/0000-0003-4957-4251">ORCID</a></li>
+      </ul>
+    </div>
   </div>
 
   <div class="people-lead__details">
@@ -215,7 +268,8 @@ computational approaches.
     </p>
 
     <div class="people-lead__links">
-      <a href="mailto:shh@ustc.edu.cn">Email</a>
+      <a href="https://shanghui.github.io/">Personal Website</a>
+      <a href="https://scholar.google.com/citations?hl=zh-CN&amp;user=HBY4LJ8AAAAJ">Google Scholar</a>
       <a href="https://faculty.ustc.edu.cn/shanghonghui/en/index.htm">USTC Faculty Profile</a>
     </div>
   </div>
@@ -278,6 +332,24 @@ computational approaches.
     </div>
     <div class="people-row__role">Master's Student</div>
     <div class="people-row__meta">Personal website</div>
+  </li>
+
+  <li class="people-row">
+    <div class="people-row__name">Shitian Wan</div>
+    <div class="people-row__role">Master's Student</div>
+    <div class="people-row__meta people-empty">—</div>
+  </li>
+
+  <li class="people-row">
+    <div class="people-row__name">Yumeng Zhou</div>
+    <div class="people-row__role">Doctoral Student</div>
+    <div class="people-row__meta people-empty">—</div>
+  </li>
+
+  <li class="people-row">
+    <div class="people-row__name">Yimang Chen</div>
+    <div class="people-row__role">Master's Student</div>
+    <div class="people-row__meta people-empty">—</div>
   </li>
 </ul>
 
