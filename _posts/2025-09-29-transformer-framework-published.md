@@ -10,7 +10,6 @@ author_profile: false
 classes: wide
 ---
 
-
 <style>
 .news-article {
   max-width: 900px;
@@ -25,13 +24,6 @@ classes: wide
   color: #748195;
   font-size: 0.9rem;
   border-bottom: 1px solid #d9e1eb;
-}
-
-.news-article h2 {
-  margin-top: 2.8rem;
-  color: #17355f;
-  font-size: 1.45rem;
-  font-weight: 650;
 }
 
 .news-article a {
@@ -54,28 +46,34 @@ classes: wide
 }
 </style>
 
-
-<div class="news-article" markdown="1">
+<div class="news-article">
 
 <p class="news-article__meta">Publication · 29 September 2025</p>
 
-A new study entitled **“Solving the many-electron Schrödinger equation with a
-transformer-based framework”** has been published in *Nature Communications*.
+<p>
+A new study entitled
+<strong>“Solving the many-electron Schrödinger equation with a transformer-based framework”</strong>
+has been published in <em>Nature Communications</em>.
+</p>
 
-The work introduces **QiankunNet**, a neural-network quantum-state framework
-that combines a Transformer-based wave-function representation with efficient
-autoregressive sampling. The framework is designed to capture complex quantum
-correlations and enable accurate calculations for challenging many-electron
-systems.
+<p>
+The work introduces <strong>QiankunNet</strong>, a neural-network quantum-state
+framework that combines a Transformer-based wave-function representation with
+efficient autoregressive sampling. The framework is designed to capture complex
+quantum correlations and enable accurate calculations for challenging
+many-electron systems.
+</p>
 
-The article is published in *Nature Communications*, volume 16, article 8464
-(2025).
+<p>
+The article is published in <em>Nature Communications</em>, volume 16,
+article 8464 (2025).
+</p>
 
-<div class="news-article__source" markdown="1">
-
-**Paper:**  
-[DOI: 10.1038/s41467-025-63219-2](https://doi.org/10.1038/s41467-025-63219-2)
-
+<div class="news-article__source">
+  <strong>Paper:</strong>
+  <a href="https://doi.org/10.1038/s41467-025-63219-2">
+    DOI: 10.1038/s41467-025-63219-2
+  </a>
 </div>
 
 </div>

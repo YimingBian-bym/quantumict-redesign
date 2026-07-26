@@ -10,7 +10,6 @@ author_profile: false
 classes: wide
 ---
 
-
 <style>
 .news-article {
   max-width: 900px;
@@ -25,13 +24,6 @@ classes: wide
   color: #748195;
   font-size: 0.9rem;
   border-bottom: 1px solid #d9e1eb;
-}
-
-.news-article h2 {
-  margin-top: 2.8rem;
-  color: #17355f;
-  font-size: 1.45rem;
-  font-weight: 650;
 }
 
 .news-article a {
@@ -54,30 +46,41 @@ classes: wide
 }
 </style>
 
-
-<div class="news-article" markdown="1">
+<div class="news-article">
 
 <p class="news-article__meta">Award · 26 December 2024</p>
 
-The research work **“Pushing the Limit of Quantum Mechanical Simulation to the
-Raman Spectra of a Biological System with 100 Million Atoms”** was selected as
-a finalist for the **2024 ACM Gordon Bell Prize**.
+<p>
+The research work
+<strong>“Pushing the Limit of Quantum Mechanical Simulation to the Raman Spectra
+of a Biological System with 100 Million Atoms”</strong>
+was selected as a finalist for the <strong>2024 ACM Gordon Bell Prize</strong>.
+</p>
 
+<p>
 The team developed the QF-RAMAN program and a quantum-fragmentation-based
 approach for highly scalable first-principles Raman simulations. The method was
-demonstrated on a biological system containing up to **100 million atoms**,
-including fragments of the SARS-CoV-2 spike glycoprotein in water.
+demonstrated on a biological system containing up to
+<strong>100 million atoms</strong>, including fragments of the SARS-CoV-2 spike
+glycoprotein in water.
+</p>
 
+<p>
 The work was one of six finalists selected for the 2024 Gordon Bell Prize and
 also received the 2024 CCF Best Supercomputing Application Award.
+</p>
 
-<div class="news-article__source" markdown="1">
-
-**Sources:**  
-[SC24 finalist announcement](https://sc24.supercomputing.org/2024/10/presenting-the-finalists-for-the-2024-gordon-bell-prize/)  
-[USTC news report](https://93.ustc.edu.cn/2024/1226/c9299a670013/pagem.htm)  
-[DOI: 10.1109/SC41406.2024.00011](https://doi.org/10.1109/SC41406.2024.00011)
-
+<div class="news-article__source">
+  <strong>Sources:</strong><br>
+  <a href="https://sc24.supercomputing.org/2024/10/presenting-the-finalists-for-the-2024-gordon-bell-prize/">
+    SC24 finalist announcement
+  </a><br>
+  <a href="https://93.ustc.edu.cn/2024/1226/c9299a670013/pagem.htm">
+    USTC news report
+  </a><br>
+  <a href="https://doi.org/10.1109/SC41406.2024.00011">
+    DOI: 10.1109/SC41406.2024.00011
+  </a>
 </div>
 
 </div>
