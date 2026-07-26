@@ -58,16 +58,16 @@ toc: false
 .news-date__month {
   display: block;
   color: #1f5fa9;
-  font-size: 0.82rem;
+  font-size: 1.48rem;
   font-weight: 720;
-  line-height: 1.3;
-  letter-spacing: 0.08em;
+  line-height: 1.15;
+  letter-spacing: 0.035em;
   text-transform: uppercase;
 }
 
 .news-date__day {
   display: block;
-  margin-top: 0.12rem;
+  margin-top: 0.18rem;
   color: #536983;
   font-size: 1.48rem;
   font-weight: 660;
@@ -155,9 +155,10 @@ toc: false
     gap: 0.38rem;
   }
 
+  .news-date__month,
   .news-date__day {
     margin-top: 0;
-    font-size: 0.92rem;
+    font-size: 1rem;
   }
 }
 </style>
