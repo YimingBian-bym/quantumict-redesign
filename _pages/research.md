@@ -38,6 +38,25 @@ toc: false
   border-bottom: 1px solid #d9e1eb;
 }
 
+.research-simple h2.research-section-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  font-size: 1.72rem !important;
+  line-height: 1.2;
+}
+
+.research-simple .research-section-title__text {
+  display: block;
+  min-width: 0;
+  color: inherit;
+  font-size: inherit !important;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+}
+
 .research-simple h3 {
   margin-top: 2rem;
   margin-bottom: 0.75rem;
@@ -65,15 +84,16 @@ toc: false
 }
 
 .research-simple .research-number {
-  display: inline-block;
+  display: block;
+  flex: 0 0 3.35rem;
   min-width: 3.35rem;
-  margin-right: 0.6rem;
+  margin: 0;
   color: #2f6fbd;
-  font-size: 1.42rem;
+  font-size: 1.52rem;
   font-weight: 720;
   letter-spacing: 0.05em;
   line-height: 1;
-  vertical-align: -0.08em;
+  text-align: left;
 }
 
 
@@ -101,6 +121,17 @@ toc: false
     font-size: 1.48rem;
   }
 
+  .research-simple h2.research-section-title {
+    gap: 0.7rem;
+    font-size: 1.48rem !important;
+  }
+
+  .research-simple .research-number {
+    flex-basis: 2.85rem;
+    min-width: 2.85rem;
+    font-size: 1.3rem;
+  }
+
   .research-simple p,
   .research-simple li {
     font-size: 0.98rem;
@@ -114,7 +145,7 @@ Our research focuses on the development and application of computational methods
 
 {: .research-intro }
 
-## <span class="research-number">01</span>High-Performance Computing
+<h2 class="research-section-title"><span class="research-number">01</span><span class="research-section-title__text">High-Performance Computing</span></h2>
 
 Large-scale scientific simulation depends not only on computing hardware, but also on efficient numerical algorithms and carefully designed scientific software. Our group develops high-performance computational approaches for electronic-structure calculations, atomistic simulation, spectroscopy, quantum chemistry, and related scientific applications.
 
@@ -129,7 +160,7 @@ A major goal is to improve scalability on modern computing platforms. This inclu
 - Performance analysis and scientific software optimization
 - Large-scale simulation of molecular and materials systems
 
-## <span class="research-number">02</span>First-Principles Methods
+<h2 class="research-section-title"><span class="research-number">02</span><span class="research-section-title__text">First-Principles Methods</span></h2>
 
 First-principles methods provide a predictive description of molecules and materials from the basic laws of quantum mechanics. Our research includes the development, implementation, and application of electronic-structure methods for studying microscopic interactions and observable physical properties.
 
@@ -145,7 +176,7 @@ We are interested in methods that improve both accuracy and computational effici
 - Response properties of molecules and materials
 - Numerical methods for large-scale quantum-mechanical calculations
 
-## <span class="research-number">03</span>Kinetic Monte Carlo and Multiscale Simulation
+<h2 class="research-section-title"><span class="research-number">03</span><span class="research-section-title__text">Kinetic Monte Carlo and Multiscale Simulation</span></h2>
 
 Many physical and chemical processes occur over time scales that are difficult to reach with direct atomistic dynamics. Kinetic Monte Carlo methods describe such processes through elementary events and transition rates, allowing simulations to access long-time evolution and large event spaces.
 
