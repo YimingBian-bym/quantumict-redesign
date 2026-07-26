@@ -55,7 +55,7 @@ classes: wide
 </style>
 
 
-<div class="news-article">
+<div class="news-article" markdown="1">
 
 <p class="news-article__meta">Award · 26 December 2024</p>
 
@@ -71,17 +71,13 @@ including fragments of the SARS-CoV-2 spike glycoprotein in water.
 The work was one of six finalists selected for the 2024 Gordon Bell Prize and
 also received the 2024 CCF Best Supercomputing Application Award.
 
-<p class="news-article__source">
-<strong>Sources:</strong><br>
-<a href="https://sc24.supercomputing.org/2024/10/presenting-the-finalists-for-the-2024-gordon-bell-prize/">
-SC24 finalist announcement
-</a><br>
-<a href="https://93.ustc.edu.cn/2024/1226/c9299a670013/pagem.htm">
-USTC news report
-</a><br>
-<a href="https://doi.org/10.1109/SC41406.2024.00011">
-DOI: 10.1109/SC41406.2024.00011
-</a>
-</p>
+<div class="news-article__source" markdown="1">
+
+**Sources:**  
+[SC24 finalist announcement](https://sc24.supercomputing.org/2024/10/presenting-the-finalists-for-the-2024-gordon-bell-prize/)  
+[USTC news report](https://93.ustc.edu.cn/2024/1226/c9299a670013/pagem.htm)  
+[DOI: 10.1109/SC41406.2024.00011](https://doi.org/10.1109/SC41406.2024.00011)
+
+</div>
 
 </div>

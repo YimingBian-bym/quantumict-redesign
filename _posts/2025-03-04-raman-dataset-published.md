@@ -55,7 +55,7 @@ classes: wide
 </style>
 
 
-<div class="news-article">
+<div class="news-article" markdown="1">
 
 <p class="news-article__meta">Publication · 4 March 2025</p>
 
@@ -71,11 +71,11 @@ The dataset provides geometry information, Raman frequencies, and intensities,
 and is intended to support materials characterization, theoretical studies, and
 future machine-learning applications.
 
-<p class="news-article__source">
-<strong>Paper:</strong>
-<a href="https://doi.org/10.1038/s41597-025-04593-w">
-DOI: 10.1038/s41597-025-04593-w
-</a>
-</p>
+<div class="news-article__source" markdown="1">
+
+**Paper:**  
+[DOI: 10.1038/s41597-025-04593-w](https://doi.org/10.1038/s41597-025-04593-w)
+
+</div>
 
 </div>

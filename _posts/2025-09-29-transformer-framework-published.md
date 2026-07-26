@@ -55,7 +55,7 @@ classes: wide
 </style>
 
 
-<div class="news-article">
+<div class="news-article" markdown="1">
 
 <p class="news-article__meta">Publication · 29 September 2025</p>
 
@@ -71,11 +71,11 @@ systems.
 The article is published in *Nature Communications*, volume 16, article 8464
 (2025).
 
-<p class="news-article__source">
-<strong>Paper:</strong>
-<a href="https://doi.org/10.1038/s41467-025-63219-2">
-DOI: 10.1038/s41467-025-63219-2
-</a>
-</p>
+<div class="news-article__source" markdown="1">
+
+**Paper:**  
+[DOI: 10.1038/s41467-025-63219-2](https://doi.org/10.1038/s41467-025-63219-2)
+
+</div>
 
 </div>
