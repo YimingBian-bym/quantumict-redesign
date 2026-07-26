@@ -1,16 +1,97 @@
 {% include base_path %}
 
-{% if page.previous or page.next %}
-  <nav class="pagination">
-    {% if page.previous %}
-      <a href="{{ base_path }}{{ page.previous.url }}" class="pagination--pager" title="{{ page.previous.title | markdownify | strip_html }}">{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</a>
-    {% else %}
-      <a href="#" class="pagination--pager disabled">{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</a>
+{% comment %}
+For News posts, paginate only within the "news" category.
+For all other posts, preserve the original Academic Pages behavior.
+{% endcomment %}
+
+{% if page.categories contains "news" %}
+
+  {% assign news_posts = site.categories.news %}
+  {% assign previous_news = nil %}
+  {% assign next_news = nil %}
+
+  {% for post in news_posts %}
+    {% if post.url == page.url %}
+      {% assign older_index = forloop.index0 | plus: 1 %}
+      {% assign newer_index = forloop.index0 | minus: 1 %}
+
+      {% unless forloop.last %}
+        {% assign previous_news = news_posts[older_index] %}
+      {% endunless %}
+
+      {% unless forloop.first %}
+        {% assign next_news = news_posts[newer_index] %}
+      {% endunless %}
+
+      {% break %}
     {% endif %}
-    {% if page.next %}
-      <a href="{{ base_path }}{{ page.next.url }}" class="pagination--pager" title="{{ page.next.title | markdownify | strip_html }}">{{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}</a>
-    {% else %}
-      <a href="#" class="pagination--pager disabled">{{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}</a>
-    {% endif %}
-  </nav>
+  {% endfor %}
+
+  {% if previous_news or next_news %}
+    <nav class="pagination">
+      {% if previous_news %}
+        <a
+          href="{{ previous_news.url | relative_url }}"
+          class="pagination--pager"
+          title="{{ previous_news.title | markdownify | strip_html }}"
+        >
+          {{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}
+        </a>
+      {% else %}
+        <a href="#" class="pagination--pager disabled">
+          {{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}
+        </a>
+      {% endif %}
+
+      {% if next_news %}
+        <a
+          href="{{ next_news.url | relative_url }}"
+          class="pagination--pager"
+          title="{{ next_news.title | markdownify | strip_html }}"
+        >
+          {{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}
+        </a>
+      {% else %}
+        <a href="#" class="pagination--pager disabled">
+          {{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}
+        </a>
+      {% endif %}
+    </nav>
+  {% endif %}
+
+{% else %}
+
+  {% if page.previous or page.next %}
+    <nav class="pagination">
+      {% if page.previous %}
+        <a
+          href="{{ base_path }}{{ page.previous.url }}"
+          class="pagination--pager"
+          title="{{ page.previous.title | markdownify | strip_html }}"
+        >
+          {{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}
+        </a>
+      {% else %}
+        <a href="#" class="pagination--pager disabled">
+          {{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}
+        </a>
+      {% endif %}
+
+      {% if page.next %}
+        <a
+          href="{{ base_path }}{{ page.next.url }}"
+          class="pagination--pager"
+          title="{{ page.next.title | markdownify | strip_html }}"
+        >
+          {{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}
+        </a>
+      {% else %}
+        <a href="#" class="pagination--pager disabled">
+          {{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}
+        </a>
+      {% endif %}
+    </nav>
+  {% endif %}
+
 {% endif %}
