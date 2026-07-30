@@ -350,11 +350,9 @@ computational approaches.
   </li>
 
   <li class="people-row">
-    <div class="people-row__name">
-      <a class="people-row__link" href="https://xiazhuozhao.com/">Zhuozhao Xia</a>
-    </div>
+    <div class="people-row__name">Zhuozhao Xia</div>
     <div class="people-row__role">Master's Student</div>
-    <div class="people-row__meta">Personal website</div>
+    <div class="people-row__meta people-empty">—</div>
   </li>
 
   <li class="people-row">
