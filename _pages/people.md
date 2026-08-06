@@ -288,6 +288,18 @@ computational approaches.
 
 <h2>Current Members</h2>
 
+<h3 class="people-subheading">Research Staff</h3>
+
+<ul class="people-list">
+  <li class="people-row">
+    <div class="people-row__name">
+      <a class="people-row__link" href="{{ '/members/muhammad-naeem-tahir' | relative_url }}">Muhammad Naeem Tahir</a>
+    </div>
+    <div class="people-row__role">Research Associate</div>
+    <div class="people-row__meta">DFT · RPA · Electronic structure</div>
+  </li>
+</ul>
+
 <h3 class="people-subheading">Doctoral Students</h3>
 
 <ul class="people-list">
@@ -296,19 +308,15 @@ computational approaches.
       <a class="people-row__link" href="{{ '/members/kanbowen' | relative_url }}">Bowen Kan</a>
     </div>
     <div class="people-row__role">Doctoral Student</div>
-    <div class="people-row__meta">Member profile</div>
+    <div class="people-row__meta">HPC · AI for Science · Computer architecture</div>
   </li>
 
   <li class="people-row">
-    <div class="people-row__name">Daiyou Xie</div>
+    <div class="people-row__name">
+      <a class="people-row__link" href="{{ '/members/xiedaiyou' | relative_url }}">Daiyou Xie</a>
+    </div>
     <div class="people-row__role">Doctoral Student</div>
-    <div class="people-row__meta people-empty">—</div>
-  </li>
-
-  <li class="people-row">
-    <div class="people-row__name">Leilei Zhu</div>
-    <div class="people-row__role">Doctoral Student</div>
-    <div class="people-row__meta people-empty">—</div>
+    <div class="people-row__meta">Quantum computing · NNQS · First principles</div>
   </li>
 
   <li class="people-row">
@@ -316,27 +324,45 @@ computational approaches.
       <a class="people-row__link" href="{{ '/members/xuzhiqian' | relative_url }}">Zhiqian Xu</a>
     </div>
     <div class="people-row__role">Doctoral Student</div>
-    <div class="people-row__meta">Member profile</div>
+    <div class="people-row__meta">Parallel computing · Quantum chemistry · Tensor networks</div>
   </li>
 
   <li class="people-row">
-    <div class="people-row__name">Yumeng Zhou</div>
+    <div class="people-row__name">
+      <a class="people-row__link" href="{{ '/members/zhouyumeng' | relative_url }}">Yumeng Zhou</a>
+    </div>
     <div class="people-row__role">Doctoral Student</div>
-    <div class="people-row__meta people-empty">—</div>
+    <div class="people-row__meta">Neural-network quantum states · HPC</div>
+  </li>
+
+  <li class="people-row">
+    <div class="people-row__name">
+      <a class="people-row__link" href="{{ '/members/zhaobowen' | relative_url }}">Bowen Zhao</a>
+    </div>
+    <div class="people-row__role">Doctoral Student</div>
+    <div class="people-row__meta">First principles · HFX stress · Raman spectra</div>
+  </li>
+
+  <li class="people-row">
+    <div class="people-row__name">
+      <a class="people-row__link" href="{{ '/members/wuhao' | relative_url }}">Hao Wu</a>
+    </div>
+    <div class="people-row__role">Doctoral Student</div>
+    <div class="people-row__meta">Strong correlation · AFQMC · NNQS</div>
+  </li>
+
+  <li class="people-row">
+    <div class="people-row__name">
+      <a class="people-row__link" href="{{ '/members/luaitong' | relative_url }}">Aitong Lu</a>
+    </div>
+    <div class="people-row__role">Doctoral Student</div>
+    <div class="people-row__meta">Quantum machine learning</div>
   </li>
 </ul>
 
 <h3 class="people-subheading">Master's Students</h3>
 
 <ul class="people-list">
-  <li class="people-row">
-    <div class="people-row__name">
-      <a class="people-row__link" href="{{ '/members/zhaobowen' | relative_url }}">Bowen Zhao</a>
-    </div>
-    <div class="people-row__role">Master's Student</div>
-    <div class="people-row__meta">Member profile</div>
-  </li>
-
   <li class="people-row">
     <div class="people-row__name">Jiexuan Zhou</div>
     <div class="people-row__role">Master's Student</div>
@@ -352,19 +378,29 @@ computational approaches.
   <li class="people-row">
     <div class="people-row__name">Zhuozhao Xia</div>
     <div class="people-row__role">Master's Student</div>
-    <div class="people-row__meta people-empty">—</div>
+    <div class="people-row__meta">HPC · Performance optimization</div>
   </li>
 
   <li class="people-row">
-    <div class="people-row__name">Shitian Wan</div>
+    <div class="people-row__name">
+      <a class="people-row__link" href="{{ '/members/wanshitian' | relative_url }}">Shitian Wan</a>
+    </div>
     <div class="people-row__role">Master's Student</div>
-    <div class="people-row__meta people-empty">—</div>
+    <div class="people-row__meta">DFT · DFPT · Machine learning for materials</div>
   </li>
 
   <li class="people-row">
     <div class="people-row__name">Yimang Chen</div>
     <div class="people-row__role">Master's Student</div>
     <div class="people-row__meta people-empty">—</div>
+  </li>
+
+  <li class="people-row">
+    <div class="people-row__name">
+      <a class="people-row__link" href="{{ '/members/huangziheng' | relative_url }}">Ziheng Huang</a>
+    </div>
+    <div class="people-row__role">Master's Student</div>
+    <div class="people-row__meta">Quantum simulation · Quantum computing</div>
   </li>
 </ul>
 
