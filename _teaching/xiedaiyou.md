@@ -1,7 +1,7 @@
 ---
-title: "Bowen Zhao"
+title: "Daiyou Xie"
 collection: teaching
-permalink: /members/zhaobowen
+permalink: /members/xiedaiyou
 author_profile: false
 classes: wide
 ---
@@ -93,43 +93,48 @@ classes: wide
 <section class="member-profile__header">
   <img
     class="member-profile__photo"
-    src="{{ '/images/people/zhaobowen.png' | relative_url }}"
-    alt="Bowen Zhao"
+    src="{{ '/images/people/xiedaiyou.jpg' | relative_url }}"
+    alt="Daiyou Xie"
   >
   <div>
     <p class="member-profile__role">Doctoral Student</p>
     <ul class="member-profile__meta">
-    <li><strong>Email:</strong> bowenzhao@mail.ustc.edu.cn</li>
-    <li><strong>Joined:</strong> 2023</li>
+    <li><strong>Email:</strong> Xdy662266@mail.ustc.edu.cn</li>
+    <li><strong>Joined:</strong> 2021</li>
     </ul>
   </div>
 </section>
 
 ## Biography
 
-Bowen Zhao is a doctoral student in physics at the University of Science and Technology of China. His research centers on first-principles calculations and AI-assisted computational methods. He has participated in projects involving zero-point renormalization, neural-network quantum states combined with auxiliary-field quantum Monte Carlo, harmonic and anharmonic Raman spectra, Fröhlich polarons, RPA force-field fitting for amino acids, and hybrid-functional stress tensors.
+Daiyou Xie is a doctoral student in the Department of Chemistry at the University of Science and Technology of China. His research focuses on first-principles calculations, neural-network quantum states, and quantum computing. He is particularly interested in data analysis and large-scale scientific computing.
 
 ## Research Interests
 
+- Quantum computing
+- Neural-network quantum states
 - First-principles electronic-structure calculations
-- Hybrid-functional stress tensors
-- Harmonic and anharmonic Raman spectroscopy
-- AI-assisted quantum and materials simulation
+- Large-scale scientific computing and data analysis
 
 ## Current Research
 
-His current work explores AI-assisted first-principles methods, with the goal of integrating modern machine-learning models into the calculation and optimization of physical observables.
+His current work combines QiankunNet-Backflow with heat-bath configuration interaction, aiming to reach chemical accuracy for the Fe₂S₂ system. He is also developing a coordinate-list-based method designed for QiankunNet and related selected-configuration-interaction approaches.
 
 ## Education
 
-- **Graduate studies in Physics**, University of Science and Technology of China, 2024–present
-- **B.S. in Physics**, University of Science and Technology of China, 2020–2024
+- **Doctoral studies**, University of Science and Technology of China, 2022–present
+- **B.S. in Computational Mathematics**, University of Science and Technology of China, 2018–2022
 
 ## Selected Publications
 
 <ol class="publication-list">
-  <li><strong>NNQS-AFQMC: Neural Network Quantum States Enhanced Fermionic Quantum Monte Carlo.</strong> <em>Journal of Chemical Theory and Computation</em>, 2025. <a href="https://doi.org/10.1021/acs.jctc.5c01138">https://doi.org/10.1021/acs.jctc.5c01138</a></li>
-  <li><strong>Polaron Superlattices in n-Doped Single Conjugated Polymers.</strong> <em>Nature Nanotechnology</em>, 2025. <a href="https://doi.org/10.1038/s41565-025-02019-7">https://doi.org/10.1038/s41565-025-02019-7</a></li>
+  <li><strong>Solving the Electronic Schrödinger Equation by Pairing Tensor-Network State with Neural Network Quantum State.</strong> <em>Mathematics</em>, 12(3), 433, 2024.</li>
+  <li><strong>High-Throughput Computation of ab initio Raman Spectra for Two-Dimensional Materials.</strong> <em>Scientific Data</em>, 12(1), 373, 2025.</li>
+  <li><strong>NNQS-SCI: Tackling Trillion-Dimensional Hilbert Space with Adaptive Neural Network Quantum States.</strong> <em>Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis</em>, 1646–1660, 2025.</li>
 </ol>
+
+## Selected Award
+
+- Team member, Grand Prize in the 2024 Challenge Cup competition
 
 </div>
