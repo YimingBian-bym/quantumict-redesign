@@ -321,14 +321,6 @@ computational approaches.
 
   <li class="people-row">
     <div class="people-row__name">
-      <a class="people-row__link" href="{{ '/members/xuzhiqian' | relative_url }}">Zhiqian Xu</a>
-    </div>
-    <div class="people-row__role">Doctoral Student</div>
-    <div class="people-row__meta">Parallel computing · Quantum chemistry · Tensor networks</div>
-  </li>
-
-  <li class="people-row">
-    <div class="people-row__name">
       <a class="people-row__link" href="{{ '/members/zhouyumeng' | relative_url }}">Yumeng Zhou</a>
     </div>
     <div class="people-row__role">Doctoral Student</div>
@@ -363,12 +355,6 @@ computational approaches.
 <h3 class="people-subheading">Master's Students</h3>
 
 <ul class="people-list">
-  <li class="people-row">
-    <div class="people-row__name">Jiexuan Zhou</div>
-    <div class="people-row__role">Master's Student</div>
-    <div class="people-row__meta people-empty">—</div>
-  </li>
-
   <li class="people-row">
     <div class="people-row__name">Pengyu Zhou</div>
     <div class="people-row__role">Master's Student</div>
@@ -408,6 +394,20 @@ computational approaches.
 
 <ul class="people-list people-alumni">
   <li class="people-row">
+    <div class="people-row__name">
+      <a class="people-row__link" href="{{ '/members/xuzhiqian' | relative_url }}">Zhiqian Xu</a>
+    </div>
+    <div class="people-row__role">Ph.D., 2025</div>
+    <div class="people-row__meta">Huawei</div>
+  </li>
+
+  <li class="people-row">
+    <div class="people-row__name">Jiexuan Zhou</div>
+    <div class="people-row__role">Master, 2025</div>
+    <div class="people-row__meta">Sinopec</div>
+  </li>
+
+  <li class="people-row">
     <div class="people-row__name">Haiwen Luo</div>
     <div class="people-row__role">Master, 2023</div>
     <div class="people-row__meta">National Supercomputer Center in Wuxi</div>
@@ -422,7 +422,7 @@ computational approaches.
   <li class="people-row">
     <div class="people-row__name">Yingxiang Gao</div>
     <div class="people-row__role">Graduated</div>
-    <div class="people-row__meta people-empty">—</div>
+    <div class="people-row__meta">Taichu (Wuxi) Electronic Technology Co., Ltd.</div>
   </li>
 </ul>
 
